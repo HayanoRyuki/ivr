@@ -1,0 +1,12 @@
+/* 固定ページだけの調整を書く */
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
