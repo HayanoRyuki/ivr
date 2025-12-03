@@ -35,7 +35,7 @@
         <li><a href="https://receptionist.co.jp/about" target="_blank" rel="noopener">運営会社情報</a></li>
         <li><a href="https://help.receptionist.jp/?help=402" target="_blank" rel="noopener">個人情報保護方針</a></li>
         <li><a href="https://help.receptionist.jp/" target="_blank" rel="noopener">ヘルプセンター</a></li>
-        <li><a href="https://staging.ivr.receptionist.jp/" target="_blank" rel="noopener">利用規約</a></li>
+        <li><a href="https://help.receptionist.jp/?help=398" target="_blank" rel="noopener">利用規約</a></li>
       </ul>
 
       <div class="lp-connect__footer-copyright">
