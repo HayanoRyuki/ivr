@@ -7,9 +7,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <header class="site-header">
   <div class="container">
     <a href="<?php echo home_url('/'); ?>" class="logo">IVR</a>
   </div>
 </header>
-

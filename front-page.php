@@ -1,35 +1,6 @@
-<?php get_header(); ?>
+<?php get_header('lp'); ?>
 
-<!-- lp-connect only -->
-<div class="lp-connect">
-
-  <!--header-->
-  <header class="lp-connect__header">
-    <div class="lp-connect__header-inner">
-      <a href="<?php echo home_url('/'); ?>" class="lp-connect__header-logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.webp" alt="代表電話コネクト" width="426" height="112">
-      </a>
-      <nav class="lp-connect__header-nav">
-        <ul class="lp-connect__header-nav-list">
-          <li><a href="#problem">よくある課題</a></li>
-          <li><a href="#function">機能について</a></li>
-          <li><a href="#recommend">活用シーン</a></li>
-          <li><a href="#price">料金プラン</a></li>
-          <li><a href="#faq">よくあるご質問</a></li>
-          <li><a href="#">ログイン</a></li>
-        </ul>
-        <div class="lp-connect__header-nav-cta">
-          <a class="lp-connect__header-button lp-connect__header-button--trial" href="#">無料トライアル</a>
-          <a class="lp-connect__header-button" href="#">資料請求はこちら</a>
-          <a class="lp-connect__header-button lp-connect__header-button--login" href="#">ログイン</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!--/ end header-->
-
-  <!--main-->
-  <main class="lp-connect__main">
+<main class="lp-connect__main">
 
     <!-- fv -->
     <section class="lp-connect__fv js-in-view fade-in-up">
@@ -424,63 +395,20 @@
   <!--/ end main -->
 
   <!-- fixed cta -->
-  <div class="lp-connect__fixed-cta isShow" id="js-fixedCta">
-    <div class="lp-connect__fixed-cta-inner">
-      <div class="lp-connect__fixed-cta-links">
-        <a class="lp-connect__button lp-connect__button--blue" href="#">無料トライアル</a>
-        <a class="lp-connect__button" href="#">資料請求はこちら</a>
-      </div>
+<div class="lp-connect__fixed-cta isShow" id="js-fixedCta">
+  <div class="lp-connect__fixed-cta-inner">
+    <div class="lp-connect__fixed-cta-links">
+      <a class="lp-connect__button lp-connect__button--blue" href="#">無料トライアル</a>
+      <a class="lp-connect__button" href="#">資料請求はこちら</a>
     </div>
   </div>
-
-  <!-- footer -->
-  <footer class="lp-connect__footer">
-    <div class="lp-connect__inner">
-
-      <!-- CTA box -->
-      <div class="lp-connect__footer-cta js-in-view fade-in-up">
-        <h2 class="lp-connect__footer-title">詳しくは、資料を<br class="lp-connect__sp-only">お受け取りください。</h2>
-
-        <div class="lp-connect__footer-cta-banner">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_cta-banner.webp" loading="lazy" alt="" width="804" height="452">
-        </div>
-
-        <div class="lp-connect__footer-cta-links">
-          <a href="#" class="lp-connect__button">資料を見てみる</a>
-          <a href="#" class="lp-connect__button lp-connect__button--blue">お問い合わせ</a>
-        </div>
-      </div>
-
-      <!-- bottom -->
-      <div class="lp-connect__footer-bottom">
-
-        <div class="lp-connect__footer-marks">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_isms.webp" loading="lazy" alt="" width="236" height="210">
-        </div>
-
-        <div class="lp-connect__footer-logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_company.webp" loading="lazy" alt="" width="264" height="64">
-        </div>
-
-        <ul class="lp-connect__footer-nav">
-          <li><a href="https://receptionist.co.jp/about" target="_blank">運営会社情報</a></li>
-          <li><a href="https://help.receptionist.jp/?help=402" target="_blank">個人情報保護方針</a></li>
-          <li><a href="https://help.receptionist.jp/" target="_blank">ヘルプセンター</a></li>
-          <li><a href="https://staging.ivr.receptionist.jp/" target="_blank">利用規約</a></li>
-        </ul>
-
-        <div class="lp-connect__footer-copyright">
-          <span>© RECEPTIONIST, Inc</span>
-          <span>All Rights Reserved.</span>
-        </div>
-
-      </div>
-    </div>
-  </footer>
 </div>
+
+</div><!-- /.lp-connect -->
 
 <!-- js -->
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/lp-connect.js"></script>
 
 <?php get_footer(); ?>
+
 
