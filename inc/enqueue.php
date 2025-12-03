@@ -76,13 +76,70 @@ function ivr_enqueue_assets() {
     );
 
     /* -----------------------------------------
-     * 6. 投稿タイプ別 CSS（自動読み込み）
-     * ----------------------------------------- */
-    if ( is_singular() || is_post_type_archive() ) {
+ * 6. 投稿タイプ別 CSS（自動読み込み）
+ * （page/post も含めて完全対応）
+ * ----------------------------------------- */
+if ( is_singular() || is_post_type_archive() ) {
 
-        $post_type = get_post_type();
+    $post_type = get_post_type();
 
-        /* ---- single-POSTTYPE.css ---- */
+    // ============================
+    // ① 固定ページ（page）
+    // ============================
+    if ( is_page() ) {
+        $page_css  = "/assets/css/single-page.css";
+        $page_path = $dir_path . $page_css;
+
+        if ( file_exists($page_path) ) {
+            wp_enqueue_style(
+                "single-page",
+                $dir_uri . $page_css,
+                ['common-single'],
+                filemtime($page_path)
+            );
+        }
+    }
+
+    // ============================
+    // ② 通常投稿（post）
+    // ============================
+    if ( $post_type === 'post' ) {
+
+        // --- single-post.css ---
+        $post_single_css  = "/assets/css/single-post.css";
+        $post_single_path = $dir_path . $post_single_css;
+
+        if ( file_exists($post_single_path) ) {
+            wp_enqueue_style(
+                "single-post",
+                $dir_uri . $post_single_css,
+                ['common-single'],
+                filemtime($post_single_path)
+            );
+        }
+
+        // --- archive-post.css（ブログ一覧）---
+        if ( is_home() || is_archive() ) {
+            $post_archive_css  = "/assets/css/archive-post.css";
+            $post_archive_path = $dir_path . $post_archive_css;
+
+            if ( file_exists($post_archive_path) ) {
+                wp_enqueue_style(
+                    "archive-post",
+                    $dir_uri . $post_archive_css,
+                    ['common-archive'],
+                    filemtime($post_archive_path)
+                );
+            }
+        }
+    }
+
+    // ============================
+    // ③ カスタム投稿タイプ（既存処理）
+    // ============================
+    if ( $post_type && !in_array($post_type, ['post', 'page']) ) {
+
+        // ---- single-POSTTYPE.css ----
         if ( is_singular($post_type) ) {
             $single_css  = "/assets/css/single-{$post_type}.css";
             $single_path = $dir_path . $single_css;
@@ -91,13 +148,13 @@ function ivr_enqueue_assets() {
                 wp_enqueue_style(
                     "single-{$post_type}",
                     $dir_uri . $single_css,
-                    ['common-single'], // ← 共通 single.css の後に読み込む
+                    ['common-single'],
                     filemtime($single_path)
                 );
             }
         }
 
-        /* ---- archive-POSTTYPE.css ---- */
+        // ---- archive-POSTTYPE.css ----
         if ( is_post_type_archive($post_type) ) {
             $archive_css  = "/assets/css/archive-{$post_type}.css";
             $archive_path = $dir_path . $archive_css;
@@ -106,12 +163,14 @@ function ivr_enqueue_assets() {
                 wp_enqueue_style(
                     "archive-{$post_type}",
                     $dir_uri . $archive_css,
-                    ['common-archive'], // ← 共通 archive.css の後に読み込む
+                    ['common-archive'],
                     filemtime($archive_path)
                 );
             }
         }
     }
+}
+
 }
 
 add_action('wp_enqueue_scripts', 'ivr_enqueue_assets');

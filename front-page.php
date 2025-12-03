@@ -40,7 +40,7 @@
           必要な電話</span>だけ折り返す。
         </h2>
         <p class="lp-connect__fv-text">
-          仮）オフィス向けクラウド受付システム国内シェアNo1の<br class="lp-connect__pc-only">
+          オフィス向けクラウド受付システム国内シェアNo1の<br class="lp-connect__pc-only">
           「RECEPTIONIST」の会社が提供します。
         </p>
 
@@ -463,10 +463,10 @@
         </div>
 
         <ul class="lp-connect__footer-nav">
-          <li><a href="#" target="_blank">運営会社情報</a></li>
-          <li><a href="#" target="_blank">個人情報保護方針</a></li>
-          <li><a href="#" target="_blank">ヘルプセンター</a></li>
-          <li><a href="#" target="_blank">利用規約</a></li>
+          <li><a href="https://receptionist.co.jp/about" target="_blank">運営会社情報</a></li>
+          <li><a href="https://help.receptionist.jp/?help=402" target="_blank">個人情報保護方針</a></li>
+          <li><a href="https://help.receptionist.jp/" target="_blank">ヘルプセンター</a></li>
+          <li><a href="https://staging.ivr.receptionist.jp/" target="_blank">利用規約</a></li>
         </ul>
 
         <div class="lp-connect__footer-copyright">
