@@ -404,8 +404,6 @@
   </div>
 </div>
 
-</div><!-- /.lp-connect -->
-
 <!-- js -->
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/lp-connect.js"></script>
 

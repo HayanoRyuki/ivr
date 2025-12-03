@@ -46,3 +46,9 @@
     </div>
   </div>
 </footer>
+
+</div><!-- /.lp-connect -->
+
+<?php wp_footer(); ?>
+</body>
+</html>
