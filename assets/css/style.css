@@ -1638,3 +1638,19 @@
   position: sticky;
   top: 0;
 }
+
+/* =========================================
+   Footer Navigation Links（黒・下線なし）
+========================================= */
+.lp-connect__footer-nav a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+.lp-connect__footer-nav a:hover {
+  opacity: 0.7;
+}
+
+.lp-connect__footer-nav a:visited {
+  color: #000 !important;
+}

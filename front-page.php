@@ -330,7 +330,7 @@
 
           <div class="lp-connect__faq-item">
             <h3 class="lp-connect__faq-item-question">通話内容の録音データはダウンロードできますか？</h3>
-            <p class="lp-connect__faq-item-answer">Web管理画面からダウンロード可能です。Slack連携時はSlack内から再生可能です。</p>
+            <p class="lp-connect__faq-item-answer">Web管理画面からダウンロード可能です。</p>
           </div>
 
           <div class="lp-connect__faq-item">
