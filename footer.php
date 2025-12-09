@@ -13,7 +13,14 @@
       </div>
 
       <div class="lp-connect__footer-cta-links">
-        <a href="#" class="lp-connect__button">資料を見てみる</a>
+
+        <!-- ▼ 資料請求リンク（仮URLに差し替え） -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+           class="lp-connect__button"
+           target="_blank" rel="noopener">
+          資料を見てみる
+        </a>
+
         <a href="#" class="lp-connect__button lp-connect__button--blue">お問い合わせ</a>
       </div>
     </div>

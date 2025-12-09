@@ -38,7 +38,12 @@
         <!-- ▼ 非表示：無料トライアル -->
         <!-- <a class="lp-connect__header-button lp-connect__header-button--trial" href="#">無料トライアル</a> -->
 
-        <a class="lp-connect__header-button" href="#">資料請求はこちら</a>
+        <!-- ▼ 資料請求リンク（仮URLに差し替え） -->
+        <a class="lp-connect__header-button"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+           target="_blank" rel="noopener">
+          資料請求はこちら
+        </a>
 
         <!-- ▼ 非表示：ログイン -->
         <!-- <a class="lp-connect__header-button lp-connect__header-button--login" href="#">ログイン</a> -->
