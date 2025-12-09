@@ -16,16 +16,17 @@
         </p>
 
         <!-- PC CTA -->
-        <div class="lp-connect__fv-cta">
-          <a class="lp-connect__button"
-             href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
-             target="_blank" rel="noopener">
-            資料を見てみる
-            <span class="lp-connect__button-icon">
-              <svg width="9" height="16" ...>...</svg>
-            </span>
-          </a>
-        </div>
+<div class="lp-connect__fv-cta">
+  <a class="lp-connect__button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
+  </a>
+</div>
 
         <!-- SP CTA -->
         <div class="lp-connect__fv-cta lp-connect__fv-cta--sp">
@@ -292,10 +293,12 @@
      href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
      target="_blank" rel="noopener">
     資料を見てみる
-    <span class="lp-connect__button-icon">…</span>
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
   </a>
 </div>
-
       </div>
     </section>
     <!--/ end recommend-->
@@ -342,12 +345,15 @@
      href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
      target="_blank" rel="noopener">
     資料を見てみる
-    <span class="lp-connect__button-icon">…</span>
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
   </a>
 </div>
-      </div>
-    </section>
-    <!--/ end faq-->
+</div>
+</section>
+<!--/ end faq-->
 
 
     <!--price-->
