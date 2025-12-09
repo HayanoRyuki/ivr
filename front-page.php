@@ -91,13 +91,16 @@
   </div>
 
   <div class="lp-connect__about-cta js-in-view fade-in-up">
-    <a class="lp-connect__button"
-       href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
-       target="_blank" rel="noopener">
-      資料を見てみる
-      <span class="lp-connect__button-icon">...</span>
-    </a>
-  </div>
+  <a class="lp-connect__button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
+  </a>
+</div>
 </section>
 <!-- / end about -->
 
@@ -156,17 +159,19 @@
     </div>
 
     <div class="lp-connect__problem-cta">
-      <a class="lp-connect__button lp-connect__button--outline"
-         href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
-         target="_blank" rel="noopener">
-        資料を見てみる
-        <span class="lp-connect__button-icon">…</span>
-      </a>
-    </div>
-  </div>
+  <a class="lp-connect__button lp-connect__button--outline"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
+  </a>
+</div>
+</div>
 </section>
 <!--/ end problem-->
-
 
     <!--function-->
     <section class="lp-connect__function" id="function">
