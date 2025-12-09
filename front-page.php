@@ -11,9 +11,9 @@
           必要な電話</span>だけ折り返す。
         </h2>
         <p class="lp-connect__fv-text">
-          オフィス向けクラウド受付システム国内シェアNo1の<br class="lp-connect__pc-only">
-          「RECEPTIONIST」の会社が提供します。
-        </p>
+  営業電話やクレーム電話から、社員の時間を守る。<br class="lp-connect__pc-only">
+  しかも月額固定料金で。
+</p>
 
         <!-- PC CTA -->
 <div class="lp-connect__fv-cta">
