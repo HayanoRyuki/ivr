@@ -1632,3 +1632,9 @@
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.lp-connect__header {
+  position: sticky;
+  top: 0;
+}
