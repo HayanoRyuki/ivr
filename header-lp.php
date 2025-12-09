@@ -28,13 +28,20 @@
         <li><a href="#recommend">活用シーン</a></li>
         <li><a href="#price">料金プラン</a></li>
         <li><a href="#faq">よくあるご質問</a></li>
-        <li><a href="#">ログイン</a></li>
+
+        <!-- ▼ 非表示：ログイン -->
+        <!-- <li><a href="#">ログイン</a></li> -->
       </ul>
 
       <div class="lp-connect__header-nav-cta">
-        <a class="lp-connect__header-button lp-connect__header-button--trial" href="#">無料トライアル</a>
+
+        <!-- ▼ 非表示：無料トライアル -->
+        <!-- <a class="lp-connect__header-button lp-connect__header-button--trial" href="#">無料トライアル</a> -->
+
         <a class="lp-connect__header-button" href="#">資料請求はこちら</a>
-        <a class="lp-connect__header-button lp-connect__header-button--login" href="#">ログイン</a>
+
+        <!-- ▼ 非表示：ログイン -->
+        <!-- <a class="lp-connect__header-button lp-connect__header-button--login" href="#">ログイン</a> -->
       </div>
     </nav>
 
