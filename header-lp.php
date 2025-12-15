@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5DTPNZSB');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DTPNZSB"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- lp-connect wrapper -->
 <div class="lp-connect">
@@ -28,25 +45,14 @@
         <li><a href="#recommend">活用シーン</a></li>
         <li><a href="#price">料金プラン</a></li>
         <li><a href="#faq">よくあるご質問</a></li>
-
-        <!-- ▼ 非表示：ログイン -->
-        <!-- <li><a href="#">ログイン</a></li> -->
       </ul>
 
       <div class="lp-connect__header-nav-cta">
-
-        <!-- ▼ 非表示：無料トライアル -->
-        <!-- <a class="lp-connect__header-button lp-connect__header-button--trial" href="#">無料トライアル</a> -->
-
-        <!-- ▼ 資料請求リンク（仮URLに差し替え） -->
         <a class="lp-connect__header-button"
            href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
            target="_blank" rel="noopener">
           資料請求はこちら
         </a>
-
-        <!-- ▼ 非表示：ログイン -->
-        <!-- <a class="lp-connect__header-button lp-connect__header-button--login" href="#">ログイン</a> -->
       </div>
     </nav>
 
