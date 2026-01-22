@@ -1,0 +1,49 @@
+<!-- about -->
+<section class="lp-connect__about js-in-view fade-in-up" id="about">
+  <div class="lp-connect__about-inner">
+    <h2 class="lp-connect__about-title">代表電話コネクト<span class="lp-connect__about-title--small">とは？</span></h2>
+
+    <h3 class="lp-connect__about-concept">
+      不要な電話対応をなくす、<br class="lp-connect__sp-only">
+      <span class="lp-connect__about-concept--blue">月額固定のサービス</span>です。
+    </h3>
+
+    <div class="lp-connect__about-contents js-in-view fade-in-up">
+
+      <div class="lp-connect__about-card">
+        <div class="lp-connect__about-card-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_about01.webp" loading="lazy" alt="" width="560" height="560">
+        </div>
+        <p class="lp-connect__about-card-text">代表電話をシステム自動応答で<br>用件を文字起こし</p>
+      </div>
+
+      <div class="lp-connect__about-card">
+        <div class="lp-connect__about-card-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_about02.webp" loading="lazy" alt="" width="560" height="560">
+        </div>
+        <p class="lp-connect__about-card-text">チャットに<br class="lp-connect__pc-only">内容を通知</p>
+      </div>
+
+      <div class="lp-connect__about-card">
+        <div class="lp-connect__about-card-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_about03.webp" loading="lazy" alt="" width="560" height="560">
+        </div>
+        <p class="lp-connect__about-card-text">必要に応じて<br class="lp-connect__pc-only">折り返して対応</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lp-connect__about-cta js-in-view fade-in-up">
+  <a class="lp-connect__button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
+  </a>
+</div>
+</section>
+<!-- / end about -->

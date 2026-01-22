@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Front Page Problem - Problemセクション
+   ========================================================================== */
+
+.lp-connect__problem {
+  background: #0098BB;
+  position: relative;
+  z-index: 1;
+  padding-block: 80px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem {
+    padding-block: 48px 60px;
+  }
+}
+
+.lp-connect__problem-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: #2A2929;
+  text-align: center;
+  padding-block: 18px 51px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-title {
+    padding-block: 7px 27px;
+    font-size: 22px;
+    font-feature-settings: "palt" 1;
+  }
+}
+.lp-connect__problem-title::before {
+  content: "";
+  position: absolute;
+  background: url(../img/deco_problem-bubble--pc.webp) no-repeat center center/contain;
+  width: 690px;
+  height: 109px;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-title::before {
+    background: url(../img/deco_problem-bubble--sp.webp) no-repeat center center/contain;
+    width: 335px;
+    height: 75px;
+  }
+}
+
+.lp-connect__problem-title--large {
+  font-size: 38px;
+  color: #EA526F;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-title--large {
+    font-size: 26px;
+    line-height: 1.5384615385;
+  }
+}
+
+.lp-connect__problem-contents {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3.2989690722%;
+  margin-top: 106px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-contents {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 83px;
+    margin-top: 83px;
+    padding-inline: 16px;
+  }
+}
+
+.lp-connect__problem-card {
+  padding: 65px 5px 31px 5px;
+  background: #fff;
+  border-radius: 20px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-card {
+    padding: 65px 12px 23px 12px;
+  }
+}
+
+.lp-connect__problem-card-comment {
+  background: #2A2929;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+  padding: 16px 8px 19px 8px;
+  border-radius: 20px;
+  position: absolute;
+  top: -59px;
+  left: 50%;
+  translate: -50% 0;
+  width: 88.4105960265%;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__problem-card-comment {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-card-comment {
+    font-size: 20px;
+  }
+}
+.lp-connect__problem-card-comment::before {
+  content: "";
+  position: absolute;
+  background: url(../img/deco_problem-triangle.webp) no-repeat center center/contain;
+  width: 32px;
+  aspect-ratio: 32/36;
+  bottom: -18px;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.lp-connect__problem-card-img {
+  position: relative;
+  width: 248px;
+  max-width: 100%;
+  margin-inline: auto;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-card-img {
+    width: 248px;
+  }
+}
+.lp-connect__problem-card-img img {
+  width: 100%;
+  height: auto;
+}
+.lp-connect__problem-card-img::before {
+  content: "";
+  position: absolute;
+  background: url(../img/deco_problem-arrow.webp) no-repeat center center/contain;
+  width: 49px;
+  aspect-ratio: 49/37;
+  top: calc(100% + 24px);
+  left: 50%;
+  translate: -50% 0;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-card-img::before {
+    top: calc(100% + 19px);
+  }
+}
+
+.lp-connect__problem-card-text {
+  margin-top: 71px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: -0.03em;
+  color: #2A2929;
+  text-align: center;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__problem-card-text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-card-text {
+    margin-top: 64px;
+    font-size: 20px;
+  }
+}
+
+.lp-connect__problem-card-text--large {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.75;
+  color: #0098BB;
+  text-decoration-color: #B4ECFE;
+  text-decoration-line: underline;
+  text-decoration-thickness: 10px;
+  text-underline-offset: 0px;
+  text-decoration-skip-ink: none;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__problem-card-text--large {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-card-text--large {
+    font-size: 24px;
+    text-decoration-thickness: 7px;
+    text-underline-offset: 0px;
+  }
+}
+
+.lp-connect__problem-cta {
+  margin-top: 48px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__problem-cta {
+    margin-top: 32px;
+  }
+}

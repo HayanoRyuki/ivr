@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Front Page About - Aboutセクション
+   ========================================================================== */
+
+.lp-connect__about {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.lp-connect__about-inner {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-block: 68px 33px;
+  padding-inline: 40px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-inner {
+    max-width: 540px;
+    padding-block: 57px 50px;
+    padding-inline: 20px;
+  }
+}
+
+.lp-connect__about-title {
+  font-size: 33px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-box: trim-both cap alphabetic;
+  color: #fff;
+  z-index: 2;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  translate: -50% 0%;
+  width: max-content;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-title {
+    font-size: 26px;
+    top: -9px;
+  }
+}
+.lp-connect__about-title .lp-connect__about-title--small {
+  font-size: 28px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-title .lp-connect__about-title--small {
+    font-size: 22px;
+  }
+}
+.lp-connect__about-title::before {
+  content: "";
+  position: absolute;
+  background: url(../img/deco_about-bubble--pc.webp) no-repeat center center/contain;
+  width: 558px;
+  height: 83px;
+  left: 50%;
+  translate: -50% 0;
+  top: -23px;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-title::before {
+    background: url(../img/deco_about-bubble--sp.webp) no-repeat center center/contain;
+    width: 335px;
+    height: 73px;
+  }
+}
+
+.lp-connect__about-concept {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2A2929;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__about-concept {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-concept {
+    font-size: 28px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    font-feature-settings: "palt" 1;
+  }
+}
+
+.lp-connect__about-concept--blue {
+  color: #0098BB;
+  font-weight: 900;
+}
+
+.lp-connect__about-contents {
+  display: flex;
+  gap: 8%;
+  margin-top: 13px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-contents {
+    flex-direction: column;
+    gap: 57px;
+    margin-top: 10px;
+  }
+}
+
+.lp-connect__about-card {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-card {
+    width: 77.6119402985%;
+    align-self: center;
+    gap: 20px;
+  }
+  .lp-connect__about-card:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    background: url(../img/deco_about-circle--sp.webp) no-repeat center center/contain;
+    top: calc(100% + 23px);
+    left: 50%;
+    translate: -50% 0;
+    width: 8px;
+    height: 38px;
+  }
+}
+
+.lp-connect__about-card:not(:last-child) .lp-connect__about-card-img::before {
+  content: "";
+  position: absolute;
+  background: url(../img/deco_about-circle--pc.webp) no-repeat center center/contain;
+  top: 50%;
+  left: calc(100% + 2px);
+  width: 68px;
+  height: 8px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-card:not(:last-child) .lp-connect__about-card-img::before {
+    display: none;
+  }
+}
+
+.lp-connect__about-card-img {
+  position: relative;
+}
+.lp-connect__about-card-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.lp-connect__about-card-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #2A2929;
+  text-align: center;
+  text-box: trim-both cap alphabetic;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__about-card-text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-card-text {
+    font-size: 18px;
+  }
+}
+
+.lp-connect__about-cta {
+  background: linear-gradient(144deg, #F0F9FB 0%, #E5F5F9 68%, #D7EEF3 100%);
+  padding-block: 49px 65px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__about-cta {
+    padding-block: 32px 59px;
+  }
+}

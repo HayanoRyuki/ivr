@@ -46,23 +46,24 @@ function ivr_enqueue_assets() {
     );
 
     /* -----------------------------------------
-     * 4. LP専用（lp-connect.css）
-     *    ※ 必要なら条件分岐へ変更可能
+     * 4. フロントページ専用CSS
      * ----------------------------------------- */
-    wp_enqueue_style(
-        'lp-connect',
-        $dir_uri . '/assets/css/lp-connect.css',
-        ['reset', 'design-style'],
-        filemtime($dir_path . '/assets/css/lp-connect.css')
-    );
+    if ( is_front_page() ) {
+        wp_enqueue_style(
+            'front-page',
+            $dir_uri . '/assets/css/front-page.css',
+            ['reset'],
+            filemtime($dir_path . '/assets/css/front-page.css')
+        );
 
-    wp_enqueue_script(
-        'lp-connect-js',
-        $dir_uri . '/assets/js/lp-connect.js',
-        [],
-        filemtime($dir_path . '/assets/js/lp-connect.js'),
-        true
-    );
+        wp_enqueue_script(
+            'lp-connect-js',
+            $dir_uri . '/assets/js/lp-connect.js',
+            [],
+            filemtime($dir_path . '/assets/js/lp-connect.js'),
+            true
+        );
+    }
 
     /* -----------------------------------------
      * 5. テーマ共通 JS

@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Front Page Fixed CTA - SP用下部固定ボタン
+   ========================================================================== */
+
+.lp-connect__fixed-cta {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__fixed-cta {
+    display: block;
+    background: #fff;
+    padding-block: 16px;
+    transition: all 0.5s ease;
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .lp-connect__fixed-cta.isShow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.lp-connect__fixed-cta .lp-connect__button {
+  width: 247px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__fixed-cta .lp-connect__button {
+    height: 48px;
+    font-size: 14px;
+    gap: 0;
+    box-shadow: none;
+  }
+}
+
+.lp-connect__fixed-cta-inner {
+  max-width: 500px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+.lp-connect__fixed-cta-links {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__fixed-cta-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+}

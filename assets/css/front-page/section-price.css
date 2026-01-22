@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Front Page Price - 料金プランセクション
+   ========================================================================== */
+
+.lp-connect__price {
+  background: #fff;
+  padding-block: 80px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price {
+    padding-block: 48px 60px;
+  }
+}
+
+.lp-connect__price-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: center;
+  color: #413C3A;
+  margin-top: 24px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-intro {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+}
+
+.lp-connect__price-contents {
+  border: 2px solid #0098BB;
+  border-radius: 24px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin-top: 48px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.07);
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-contents {
+    margin-top: 32px;
+    border-radius: 16px;
+  }
+}
+
+.lp-connect__price-card {
+  width: 50%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.lp-connect__price-card:first-child::before {
+  content: "";
+  position: absolute;
+  background-image: repeating-linear-gradient(180deg, #DDD9D7, #DDD9D7 4px, transparent 4px, transparent 8px);
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+}
+
+.lp-connect__price-card-head {
+  display: grid;
+  place-content: center;
+  padding: 10px;
+  background: #fff;
+  width: 100%;
+  min-height: 120px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-card-head {
+    min-height: 90px;
+  }
+}
+
+.lp-connect__price-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #0098bb;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-card-title {
+    font-size: 17px;
+  }
+}
+
+.lp-connect__price-card-body {
+  display: grid;
+  place-content: center;
+  background: #E9FBFF;
+  width: 100%;
+  min-height: 120px;
+  padding: 10px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-card-body {
+    min-height: 90px;
+  }
+}
+
+.lp-connect__price-card-detail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-card-detail {
+    flex-wrap: wrap;
+    gap: 8px 0;
+  }
+}
+
+.lp-connect__price-card-number {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+  color: #191817;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-card-number {
+    font-size: 36px;
+  }
+}
+
+.lp-connect__price-card-unit {
+  font-size: 24px;
+  font-weight: 700;
+  color: #191817;
+  margin-bottom: 2px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-card-unit {
+    font-size: 20px;
+  }
+}
+
+.lp-connect__price-card-unit--mini {
+  font-size: 20px;
+  font-weight: 400;
+  color: #191817;
+  margin-bottom: 2px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-card-unit--mini {
+    font-size: 16px;
+  }
+}
+
+.lp-connect__price-babble {
+  margin-top: 42px;
+  border-radius: 24px;
+  background: #0098BB;
+  position: relative;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__price-babble {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-babble {
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 14px 0 14px 13px;
+  }
+}
+.lp-connect__price-babble::before {
+  content: "";
+  position: absolute;
+  background: url(../img/deco_price-triangle.webp) no-repeat center center/contain;
+  width: 35px;
+  height: 42px;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lp-connect__price-babble-text {
+  position: relative;
+  z-index: 1;
+}
+
+.lp-connect__price-attention {
+  margin-top: 24px;
+}
+
+.lp-connect__price-attention-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #413C3A;
+  font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-attention-text {
+    font-size: 16px;
+  }
+}
+.lp-connect__price-attention-text.lp-connect__price-attention-text--bold {
+  font-weight: 700;
+}

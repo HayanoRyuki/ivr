@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Front Page CSS - LP用スタイル統合
+   ========================================================================== */
+
+/* 共通ベース */
+@import url("front-page/base.css");
+
+/* ヘッダー */
+@import url("front-page/section-header.css");
+
+/* ファーストビュー */
+@import url("front-page/section-fv.css");
+
+/* About */
+@import url("front-page/section-about.css");
+
+/* Problem */
+@import url("front-page/section-problem.css");
+
+/* Function */
+@import url("front-page/section-function.css");
+
+/* Recommend */
+@import url("front-page/section-recommend.css");
+
+/* FAQ */
+@import url("front-page/section-faq.css");
+
+/* Price */
+@import url("front-page/section-price.css");
+
+/* Fixed CTA */
+@import url("front-page/section-fixed-cta.css");
+
+/* Footer */
+@import url("front-page/section-footer.css");

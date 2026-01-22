@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Front Page FAQ - よくある質問セクション
+   ========================================================================== */
+
+.lp-connect__faq {
+  background: #F7F6F4;
+  padding-block: 82px 80px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__faq {
+    padding-block: 48px 60px;
+  }
+}
+
+.lp-connect__faq-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 48px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__faq-contents {
+    margin-top: 32px;
+  }
+}
+
+.lp-connect__faq-item {
+  padding: 31px;
+  box-shadow: 0px 1px 3px rgba(221, 217, 214, 0.64);
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #DDD9D7;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  background: #fff;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__faq-item {
+    padding: 32px 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__faq-item {
+    padding: 32px 19px;
+    gap: 16px;
+  }
+}
+
+.lp-connect__faq-item-question {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+  color: #2A2929;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__faq-item-question {
+    font-size: 20px;
+  }
+}
+.lp-connect__faq-item-question::before {
+  content: "";
+  background: url(../img/icon_faq.webp) no-repeat center center/contain;
+  width: 40px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.lp-connect__faq-item-answer {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #413C3A;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__faq-item-answer {
+    font-size: 18px;
+  }
+}
+
+.lp-connect__faq-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__faq-cta {
+    margin-top: 32px;
+  }
+}

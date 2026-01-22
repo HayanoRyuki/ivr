@@ -1,0 +1,70 @@
+<!--recommend-->
+<section class="lp-connect__recommend" id="recommend">
+  <div class="lp-connect__inner">
+
+    <div class="lp-connect__section-head js-in-view fade-in-up">
+      <span class="lp-connect__section-head-deco">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/deco_recommend-title.webp"
+             alt="Recommend" width="366" height="72" loading="lazy">
+      </span>
+      <h2 class="lp-connect__section-head-title">
+        こんなシーンで<br class="lp-connect__sp-only">活用できます
+      </h2>
+    </div>
+
+    <div class="lp-connect__recommend-contents js-in-view fade-in-up">
+
+      <?php
+      $recommend_imgs = [
+        'img_recommend01.webp',
+        'img_recommend02.webp',
+        'img_recommend03.webp',
+        'img_recommend04.webp',
+        'img_recommend05.webp'
+      ];
+
+      $recommend_titles = [
+        '固定電話をなくしたい',
+        'ハイブリッドワーク',
+        'オフィス不在時の対応',
+        '外線番号の棚卸し',
+        '電話が苦手な若手社員が多い'
+      ];
+
+      $recommend_texts = [
+        '全社員への携帯端末の貸与やフリーアドレス化により、固定電話が不要になった。',
+        '出社メンバーにだけ代表電話対応が発生してしまうのを避けたい。',
+        '平日の事務所に誰もいない、深夜など営業時間外の電話もリアルタイム確認したい。',
+        '外線番号が複数あるが、実際にどのくらい使われているのかわからないのでログを取りたい。',
+        '若手社員が電話に出てくれない・慣れていないので用件を正確に伝えられない。'
+      ];
+
+      for ($i = 0; $i < 5; $i++) : ?>
+        <div class="lp-connect__recommend-card">
+          <div class="lp-connect__recommend-card-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $recommend_imgs[$i]; ?>"
+                 loading="lazy" width="602" height="404" alt="">
+          </div>
+          <div class="lp-connect__recommend-card-body">
+            <h3 class="lp-connect__recommend-card-title"><?php echo $recommend_titles[$i]; ?></h3>
+            <p class="lp-connect__recommend-card-text"><?php echo $recommend_texts[$i]; ?></p>
+          </div>
+        </div>
+      <?php endfor; ?>
+
+    </div>
+
+    <div class="lp-connect__recommend-cta">
+  <a class="lp-connect__button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
+  </a>
+</div>
+  </div>
+</section>
+<!--/ end recommend-->

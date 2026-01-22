@@ -1,0 +1,50 @@
+<!-- fv -->
+<section class="lp-connect__fv js-in-view fade-in-up">
+  <div class="lp-connect__fv-inner">
+    <h2 class="lp-connect__fv-title">
+      代表電話は<br>
+      システム対応で<span class="lp-connect__fv-title--large">文字起こし、<br>
+      必要な電話</span>だけ折り返す。
+    </h2>
+    <p class="lp-connect__fv-text">
+営業電話やクレーム電話から、社員の時間を守る。<br class="lp-connect__pc-only">
+しかも月額固定料金で。
+</p>
+
+    <!-- PC CTA -->
+<div class="lp-connect__fv-cta">
+  <a class="lp-connect__button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
+  </a>
+</div>
+
+    <!-- SP CTA -->
+    <div class="lp-connect__fv-cta lp-connect__fv-cta--sp">
+
+      <!-- ▼ 無料トライアル → 非表示 -->
+      <!--
+      <a class="lp-connect__button lp-connect__button--blue" href="#">無料トライアル</a>
+      -->
+
+      <a class="lp-connect__button"
+         href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+         target="_blank" rel="noopener">
+        資料請求はこちら
+      </a>
+    </div>
+  </div>
+
+  <div class="lp-connect__fv-img">
+    <picture>
+      <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/img_fv--pc.webp">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_fv--sp.webp" alt="..." width="738" height="712">
+    </picture>
+  </div>
+</section>
+<!--/ end fv -->

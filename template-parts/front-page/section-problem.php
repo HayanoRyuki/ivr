@@ -1,0 +1,65 @@
+<!--problem-->
+<section class="lp-connect__problem" id="problem">
+  <div class="lp-connect__inner">
+    <h2 class="lp-connect__problem-title js-in-view fade-in-up">
+      こんな<span class="lp-connect__problem-title--large">お悩み</span>、ありませんか？
+    </h2>
+
+    <div class="lp-connect__problem-contents js-in-view fade-in-up">
+
+      <div class="lp-connect__problem-card">
+        <h3 class="lp-connect__problem-card-comment">
+          電話が鳴るたびに<br>スタッフの時間が取られる
+        </h3>
+        <div class="lp-connect__problem-card-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_problem01.webp"
+               loading="lazy" alt="" width="496" height="354">
+        </div>
+        <p class="lp-connect__problem-card-text">
+          <span class="lp-connect__problem-card-text--large">自動応答</span>で<br>無駄な電話に邪魔されない
+        </p>
+      </div>
+
+      <div class="lp-connect__problem-card">
+        <h3 class="lp-connect__problem-card-comment">
+          営業電話は出たくないが<br>出ないとわからない
+        </h3>
+        <div class="lp-connect__problem-card-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_problem02.webp"
+               loading="lazy" alt="" width="496" height="354">
+        </div>
+        <p class="lp-connect__problem-card-text">
+          <span class="lp-connect__problem-card-text--large">記録された通話内容</span>から<br>必要な用件だけ折り返し
+        </p>
+      </div>
+
+      <div class="lp-connect__problem-card">
+        <h3 class="lp-connect__problem-card-comment">
+          電話代行サービスは<br>月額料＋受信通話料が高い
+        </h3>
+        <div class="lp-connect__problem-card-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_problem03.webp"
+               loading="lazy" alt="" width="496" height="354">
+        </div>
+        <p class="lp-connect__problem-card-text">
+          受信通話料の従量課金がない<br>
+          <span class="lp-connect__problem-card-text--large">完全固定月額料金</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="lp-connect__problem-cta">
+  <a class="lp-connect__button lp-connect__button--outline"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon_button-arrow.svg"
+           alt="" width="9" height="16">
+    </span>
+  </a>
+</div>
+</div>
+</section>
+<!--/ end problem-->

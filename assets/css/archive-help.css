@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Archive Help - ヘルプ一覧ページ
+   ========================================================================== */
+
+.archive-help {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.archive-help .archive-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* ヘルプ記事リスト */
+.archive-help .archive-loop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ヘルプカード */
+.archive-help .loop-help {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.archive-help .loop-help:hover {
+  border-color: #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+}
+
+.archive-help .loop-help a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.archive-help .loop-help-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.archive-help .loop-help-excerpt {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* カテゴリタグ */
+.archive-help .loop-help-category {
+  display: inline-block;
+  font-size: 12px;
+  color: #0066cc;
+  background: #e6f0ff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* ページネーション */
+.archive-help .pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.archive-help .pagination .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.archive-help .pagination .page-numbers:hover {
+  background: #f5f5f5;
+  border-color: #0066cc;
+  color: #0066cc;
+}
+
+.archive-help .pagination .page-numbers.current {
+  background: #0066cc;
+  border-color: #0066cc;
+  color: #fff;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .archive-help {
+    padding: 40px 16px;
+  }
+
+  .archive-help .archive-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .archive-help .loop-help {
+    padding: 16px 20px;
+  }
+
+  .archive-help .loop-help-title {
+    font-size: 16px;
+  }
+
+  .archive-help .loop-help-excerpt {
+    font-size: 13px;
+  }
+}

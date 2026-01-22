@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/**
+ * =========================================
+ * single-resource.css - 資料詳細ページ用スタイル
+ * =========================================
+ */
+
+/* =========================================
+   2カラムレイアウト
+========================================= */
+.single-resource .single-container--two-col {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 48px;
+  align-items: start;
+}
+
+@media screen and (max-width: 1024px) {
+  .single-resource .single-container--two-col {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* 左カラム */
+.single-resource .single-main {
+  min-width: 0;
+}
+
+/* 右カラム（サイドバー） */
+.single-resource .single-sidebar {
+  position: sticky;
+  top: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .single-resource .single-sidebar {
+    position: static;
+  }
+}
+
+/* =========================================
+   資料詳細 固有スタイル
+========================================= */
+.single-resource .single-header {
+  margin-bottom: 32px;
+}
+
+.single-resource .single-meta {
+  margin-bottom: 16px;
+}
+
+.single-resource .single-date {
+  font-size: 14px;
+  color: #908883;
+}
+
+.single-resource .single-title {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #2A2929;
+}
+
+@media screen and (max-width: 767px) {
+  .single-resource .single-title {
+    font-size: 24px;
+  }
+}
+
+/* =========================================
+   資料請求フォーム
+========================================= */
+.resource-form {
+  background: #fff;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.resource-form__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0098BB;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.resource-form__desc {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.resource-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resource-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resource-form__row {
+  display: flex;
+  gap: 16px;
+}
+
+.resource-form__group--half {
+  flex: 1;
+}
+
+.resource-form__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2A2929;
+}
+
+.resource-form__required {
+  color: #E53935;
+  font-weight: 600;
+}
+
+.resource-form__input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #DDD9D7;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-form__input:focus {
+  outline: none;
+  border-color: #0098BB;
+  box-shadow: 0 0 0 3px rgba(0, 152, 187, 0.1);
+}
+
+.resource-form__input::placeholder {
+  color: #B0B0B0;
+}
+
+/* ラジオボタン */
+.resource-form__radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.resource-form__radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #413C3A;
+  cursor: pointer;
+}
+
+.resource-form__radio input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0098BB;
+  cursor: pointer;
+}
+
+/* チェックボックス */
+.resource-form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: #413C3A;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.resource-form__checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0098BB;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.resource-form__checkbox a {
+  color: #0098BB;
+  text-decoration: underline;
+}
+
+.resource-form__checkbox a:hover {
+  text-decoration: none;
+}
+
+/* 送信ボタン */
+.resource-form__submit {
+  margin-top: 8px;
+}
+
+.resource-form__button {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #0098BB 0%, #007A96 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.resource-form__button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.resource-form__button:active {
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 767px) {
+  .resource-form {
+    padding: 24px 20px;
+  }
+
+  .resource-form__title {
+    font-size: 20px;
+  }
+
+  .resource-form__row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* =========================================
+   ナビゲーション
+========================================= */
+.single-resource .single-nav {
+  margin-top: 60px;
+  padding-top: 32px;
+  border-top: 1px solid #DDD9D7;
+}
+
+.single-resource .single-nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-resource .single-nav a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0098BB;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.single-resource .single-nav a:hover {
+  opacity: 0.7;
+}
+
+.single-resource .single-nav-back a {
+  padding: 12px 24px;
+  background-color: #F7F6F4;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .single-resource .single-nav {
+    margin-top: 40px;
+  }
+
+  .single-resource .single-nav-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

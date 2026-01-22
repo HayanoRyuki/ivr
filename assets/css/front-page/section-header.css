@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Front Page Header - ヘッダー
+   ========================================================================== */
+
+.lp-connect__header {
+  width: 100%;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+.lp-connect__header-inner {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-inline: 20px;
+  padding-block: 8px;
+  max-width: 1320px;
+  margin-inline: auto;
+  align-items: center;
+  height: 72px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__header-inner {
+    height: 60px;
+  }
+}
+
+.lp-connect__header-logo {
+  display: inline-block;
+}
+.lp-connect__header-logo img {
+  width: 213px;
+  height: auto;
+  aspect-ratio: 213/56;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__header-logo img {
+    width: 213px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__header-logo img {
+    width: 160px;
+  }
+}
+
+.lp-connect__header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.lp-connect__header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.lp-connect__header-nav-list a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  white-space: nowrap;
+  color: #2A2929;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+@media (any-hover: hover) {
+  .lp-connect__header-nav-list a:hover {
+    opacity: 0.7;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__header-nav-list {
+    display: none;
+  }
+}
+
+/* ヘッダー用CTA */
+.lp-connect__header-nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lp-connect__header-button {
+  display: grid;
+  place-content: center;
+  width: 150px;
+  height: 48px;
+  border: 2px solid transparent;
+  border-radius: 100vmax;
+  background: #EA526F;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__header-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__header-button {
+    font-size: 14px;
+  }
+}
+@media (any-hover: hover) {
+  .lp-connect__header-button:hover {
+    border: 2px solid #EA526F;
+    background: #ffffff;
+    color: #EA526F;
+  }
+}
+.lp-connect__header-button.lp-connect__header-button--trial,
+.lp-connect__header-button.lp-connect__header-button--login {
+  border: 2px solid #0098BB;
+  background: #ffffff;
+  color: #0098BB;
+}
+@media (any-hover: hover) {
+  .lp-connect__header-button.lp-connect__header-button--trial:hover,
+  .lp-connect__header-button.lp-connect__header-button--login:hover {
+    border: 2px solid #0098BB;
+    background: #0098BB;
+    color: #fff;
+  }
+}
+.lp-connect__header-button.lp-connect__header-button--login {
+  display: none;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__header-button.lp-connect__header-button--login {
+    display: grid;
+    width: 80px;
+    height: 38px;
+  }
+}

@@ -1,0 +1,59 @@
+<!--function-->
+<section class="lp-connect__function" id="function">
+  <div class="lp-connect__inner">
+
+    <div class="lp-connect__section-head js-in-view fade-in-up">
+      <div class="lp-connect__section-head-deco">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/deco_function-title.webp"
+             alt="Function" width="366" height="72" loading="lazy">
+      </div>
+      <h2 class="lp-connect__section-head-title">機能について</h2>
+    </div>
+
+    <p class="lp-connect__function-intro js-in-view fade-in-up">
+      代表番号宛の電話に自動で応答・記録し、すぐに通話内容を確認できます。
+    </p>
+
+    <div class="lp-connect__function-contents js-in-view fade-in-up">
+
+      <?php
+      // 8機能カードの設定（画像、タイトル、オプション機能かどうか）
+      $functions = [
+        ['img' => 'img_function01.webp', 'title' => '自動応答', 'option' => false],
+        ['img' => 'img_function01.webp', 'title' => '用件振り分け', 'option' => true],  // TODO: 画像差し替え
+        ['img' => 'img_function02.webp', 'title' => '音声録音', 'option' => false],
+        ['img' => 'img_function03.webp', 'title' => '音声文字起こし', 'option' => false],
+        ['img' => 'img_function01.webp', 'title' => '指定番号に転送', 'option' => true],  // TODO: 画像差し替え
+        ['img' => 'img_function04.webp', 'title' => '着信ログをWEBから確認', 'option' => false],
+        ['img' => 'img_function05.webp', 'title' => '着信ログのステータス管理', 'option' => false],
+        ['img' => 'img_function06.webp', 'title' => 'チャット連携', 'option' => false],
+      ];
+
+      foreach ($functions as $func) : ?>
+        <div class="lp-connect__function-card">
+          <div class="lp-connect__function-card-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $func['img']; ?>"
+                 loading="lazy" width="210" height="200" alt="">
+          </div>
+          <h3 class="lp-connect__function-card-title">
+            <?php echo $func['title']; ?><?php if ($func['option']) echo ' <span class="lp-connect__function-option">*</span>'; ?>
+          </h3>
+        </div>
+      <?php endforeach; ?>
+
+    </div>
+
+    <p class="lp-connect__function-note">* オプション機能です</p>
+
+    <div class="lp-connect__function-cta">
+  <a class="lp-connect__button"
+     href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
+     target="_blank" rel="noopener">
+    資料を見てみる
+    <span class="lp-connect__button-icon">…</span>
+  </a>
+</div>
+
+</div>
+</section>
+<!--/ end function-->
