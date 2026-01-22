@@ -937,13 +937,24 @@
 }
 
 .lp-connect__function-contents {
-  width: 968px;
+  width: 1160px;
   max-width: 100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px 3.4%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
   margin-top: 40px;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__function-contents {
+    width: 100%;
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .lp-connect__function-contents {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__function-contents {
@@ -988,6 +999,31 @@
 @media screen and (max-width: 767px) {
   .lp-connect__function-card-title {
     font-size: 20px;
+  }
+}
+
+/* オプション機能マーク */
+.lp-connect__function-option {
+  color: #00A0B0;
+  font-weight: 600;
+}
+
+/* オプション機能の注釈 */
+.lp-connect__function-note {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  max-width: 1160px;
+  margin: 16px auto 0;
+}
+@media screen and (max-width: 1180px) {
+  .lp-connect__function-note {
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__function-note {
+    padding-inline: 17px;
   }
 }
 

@@ -192,36 +192,33 @@
         <div class="lp-connect__function-contents js-in-view fade-in-up">
 
           <?php
-          // 6機能カードの画像ファイル名
-          $function_imgs = [
-            'img_function01.webp',
-            'img_function02.webp',
-            'img_function03.webp',
-            'img_function04.webp',
-            'img_function05.webp',
-            'img_function06.webp'
+          // 8機能カードの設定（画像、タイトル、オプション機能かどうか）
+          $functions = [
+            ['img' => 'img_function01.webp', 'title' => '自動応答', 'option' => false],
+            ['img' => 'img_function01.webp', 'title' => '用件振り分け', 'option' => true],  // TODO: 画像差し替え
+            ['img' => 'img_function02.webp', 'title' => '音声録音', 'option' => false],
+            ['img' => 'img_function03.webp', 'title' => '音声文字起こし', 'option' => false],
+            ['img' => 'img_function01.webp', 'title' => '指定番号に転送', 'option' => true],  // TODO: 画像差し替え
+            ['img' => 'img_function04.webp', 'title' => '着信ログをWEBから確認', 'option' => false],
+            ['img' => 'img_function05.webp', 'title' => '着信ログのステータス管理', 'option' => false],
+            ['img' => 'img_function06.webp', 'title' => 'チャット連携', 'option' => false],
           ];
 
-          $function_titles = [
-            '自動応答',
-            '音声録音',
-            '音声文字起こし',
-            '着信ログをWEBから確認',
-            '着信ログのステータス管理',
-            'チャット連携'
-          ];
-
-          for ($i = 0; $i < 6; $i++) : ?>
+          foreach ($functions as $func) : ?>
             <div class="lp-connect__function-card">
               <div class="lp-connect__function-card-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $function_imgs[$i]; ?>"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $func['img']; ?>"
                      loading="lazy" width="210" height="200" alt="">
               </div>
-              <h3 class="lp-connect__function-card-title"><?php echo $function_titles[$i]; ?></h3>
+              <h3 class="lp-connect__function-card-title">
+                <?php echo $func['title']; ?><?php if ($func['option']) echo ' <span class="lp-connect__function-option">*</span>'; ?>
+              </h3>
             </div>
-          <?php endfor; ?>
+          <?php endforeach; ?>
 
         </div>
+
+        <p class="lp-connect__function-note">* オプション機能です</p>
 
         <div class="lp-connect__function-cta">
   <a class="lp-connect__button"
