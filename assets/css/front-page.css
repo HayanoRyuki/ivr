@@ -291,7 +291,9 @@ a.lp-connect__button:link,
   align-items: center;
   gap: 24px;
 }
-.lp-connect__header-nav-list a {
+.lp-connect__header-nav-list a,
+.lp-connect__header-nav-list a:link,
+.lp-connect__header-nav-list a:visited {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.6;
