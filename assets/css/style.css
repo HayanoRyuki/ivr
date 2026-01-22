@@ -56,6 +56,9 @@
 }
 /* セクション共通ボタン（基本・ピンク）
 ***************************************************************/
+a.lp-connect__button,
+a.lp-connect__button:visited,
+a.lp-connect__button:link,
 .lp-connect__button {
   width: 360px;
   height: 60px;
@@ -78,6 +81,7 @@
   text-box: trim-both cap alphabetic;
 }
 @media (any-hover: hover) {
+  a.lp-connect__button:hover,
   .lp-connect__button:hover {
     background-color: #fff;
     color: #EA526F;
