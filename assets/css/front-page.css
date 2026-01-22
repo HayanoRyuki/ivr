@@ -321,6 +321,9 @@ a.lp-connect__button:link,
   gap: 16px;
 }
 
+a.lp-connect__header-button,
+a.lp-connect__header-button:link,
+a.lp-connect__header-button:visited,
 .lp-connect__header-button {
   display: grid;
   place-content: center;
