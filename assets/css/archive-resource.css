@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**
+ * =========================================
+ * archive-resource.css - 資料一覧ページ用スタイル
+ * =========================================
+ */
+
+/* =========================================
+   資料一覧 固有スタイル
+========================================= */
+.archive-resource .archive-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.archive-resource .archive-title {
+  font-size: 36px;
+  color: #0098BB;
+}
+
+.archive-resource .archive-description {
+  font-size: 16px;
+  color: #59514E;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .archive-resource .archive-title {
+    font-size: 28px;
+  }
+
+  .archive-resource .archive-header {
+    margin-bottom: 32px;
+  }
+}
+
+/* カードスタイル調整 */
+.archive-resource .archive-card {
+  border: 1px solid #E6F5F8;
+}
+
+.archive-resource .archive-card:hover {
+  border-color: #0098BB;
+}
+
+.archive-resource .archive-card-thumbnail--noimage {
+  background: linear-gradient(135deg, #E6F5F8 0%, #D7EEF3 100%);
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.archive-resource .archive-card-thumbnail--noimage span {
+  font-size: 14px;
+  color: #0098BB;
+  font-weight: 700;
+}

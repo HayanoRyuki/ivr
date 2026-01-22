@@ -1,6 +1,15 @@
 <?php
 /**
- * CSS・JS の読み込み（LP + 通常ページ + 投稿タイプ別CSS）
+ * CSS・JS の読み込み
+ *
+ * 構成:
+ * 1. reset.css     - リセットCSS（全ページ共通・最優先）
+ * 2. common.css    - サイト全体の基本スタイル（全ページ共通）
+ * 3. front-page.css - TOPページ（LP）専用スタイル ※front-pageのみ
+ * 4. single.css    - 投稿詳細ページ共通スタイル
+ * 5. archive.css   - アーカイブページ共通スタイル
+ * 6. page.css      - 固定ページ共通スタイル
+ * 7. 各投稿タイプ別CSS - 自動読み込み
  */
 
 function ivr_enqueue_assets() {
@@ -12,165 +21,198 @@ function ivr_enqueue_assets() {
      * 1. リセットCSS（最優先）
      * ----------------------------------------- */
     wp_enqueue_style(
-        'reset',
+        'ivr-reset',
         $dir_uri . '/assets/css/reset.css',
         [],
         filemtime($dir_path . '/assets/css/reset.css')
     );
 
     /* -----------------------------------------
-     * 2. デザイナー共通CSS
+     * 2. 共通CSS（サイト全体の基本スタイル）
      * ----------------------------------------- */
     wp_enqueue_style(
-        'design-style',
-        $dir_uri . '/assets/css/style.css',
-        ['reset'],
-        filemtime($dir_path . '/assets/css/style.css')
+        'ivr-common',
+        $dir_uri . '/assets/css/common.css',
+        ['ivr-reset'],
+        filemtime($dir_path . '/assets/css/common.css')
     );
 
     /* -----------------------------------------
-     * 3. 共通 single.css / archive.css
+     * 3. TOPページ専用CSS（front-page.phpのみ）
      * ----------------------------------------- */
-    wp_enqueue_style(
-        'common-single',
-        $dir_uri . '/assets/css/single.css',
-        ['design-style'],
-        filemtime($dir_path . '/assets/css/single.css')
-    );
+    if ( is_front_page() ) {
+        wp_enqueue_style(
+            'ivr-front-page',
+            $dir_uri . '/assets/css/front-page.css',
+            ['ivr-common'],
+            filemtime($dir_path . '/assets/css/front-page.css')
+        );
 
-    wp_enqueue_style(
-        'common-archive',
-        $dir_uri . '/assets/css/archive.css',
-        ['design-style'],
-        filemtime($dir_path . '/assets/css/archive.css')
-    );
+        // LP専用JS
+        wp_enqueue_script(
+            'ivr-lp-connect-js',
+            $dir_uri . '/assets/js/lp-connect.js',
+            [],
+            filemtime($dir_path . '/assets/js/lp-connect.js'),
+            true
+        );
+    }
 
     /* -----------------------------------------
-     * 4. LP専用（lp-connect.css）
-     *    ※ 必要なら条件分岐へ変更可能
+     * 4. 投稿詳細ページ共通CSS
      * ----------------------------------------- */
-    wp_enqueue_style(
-        'lp-connect',
-        $dir_uri . '/assets/css/lp-connect.css',
-        ['reset', 'design-style'],
-        filemtime($dir_path . '/assets/css/lp-connect.css')
-    );
-
-    wp_enqueue_script(
-        'lp-connect-js',
-        $dir_uri . '/assets/js/lp-connect.js',
-        [],
-        filemtime($dir_path . '/assets/js/lp-connect.js'),
-        true
-    );
-
-    /* -----------------------------------------
-     * 5. テーマ共通 JS
-     * ----------------------------------------- */
-    wp_enqueue_script(
-        'mc-main',
-        $dir_uri . '/assets/js/main.js',
-        [],
-        filemtime($dir_path . '/assets/js/main.js'),
-        true
-    );
-
-    /* -----------------------------------------
- * 6. 投稿タイプ別 CSS（自動読み込み）
- * （page/post も含めて完全対応）
- * ----------------------------------------- */
-if ( is_singular() || is_post_type_archive() ) {
-
-    $post_type = get_post_type();
-
-    // ============================
-    // ① 固定ページ（page）
-    // ============================
-    if ( is_page() ) {
-        $page_css  = "/assets/css/single-page.css";
-        $page_path = $dir_path . $page_css;
-
-        if ( file_exists($page_path) ) {
+    if ( is_singular() && !is_front_page() ) {
+        $single_css_path = $dir_path . '/assets/css/single.css';
+        if ( file_exists($single_css_path) ) {
             wp_enqueue_style(
-                "single-page",
-                $dir_uri . $page_css,
-                ['common-single'],
-                filemtime($page_path)
+                'ivr-single',
+                $dir_uri . '/assets/css/single.css',
+                ['ivr-common'],
+                filemtime($single_css_path)
             );
         }
     }
 
-    // ============================
-    // ② 通常投稿（post）
-    // ============================
-    if ( $post_type === 'post' ) {
-
-        // --- single-post.css ---
-        $post_single_css  = "/assets/css/single-post.css";
-        $post_single_path = $dir_path . $post_single_css;
-
-        if ( file_exists($post_single_path) ) {
+    /* -----------------------------------------
+     * 5. アーカイブページ共通CSS
+     * ----------------------------------------- */
+    if ( is_archive() || is_home() ) {
+        $archive_css_path = $dir_path . '/assets/css/archive.css';
+        if ( file_exists($archive_css_path) ) {
             wp_enqueue_style(
-                "single-post",
-                $dir_uri . $post_single_css,
-                ['common-single'],
-                filemtime($post_single_path)
+                'ivr-archive',
+                $dir_uri . '/assets/css/archive.css',
+                ['ivr-common'],
+                filemtime($archive_css_path)
             );
         }
+    }
 
-        // --- archive-post.css（ブログ一覧）---
-        if ( is_home() || is_archive() ) {
-            $post_archive_css  = "/assets/css/archive-post.css";
-            $post_archive_path = $dir_path . $post_archive_css;
+    /* -----------------------------------------
+     * 6. 固定ページ共通CSS
+     * ----------------------------------------- */
+    if ( is_page() && !is_front_page() ) {
+        $page_css_path = $dir_path . '/assets/css/page.css';
+        if ( file_exists($page_css_path) ) {
+            wp_enqueue_style(
+                'ivr-page',
+                $dir_uri . '/assets/css/page.css',
+                ['ivr-common'],
+                filemtime($page_css_path)
+            );
+        }
+    }
 
-            if ( file_exists($post_archive_path) ) {
+    /* -----------------------------------------
+     * 7. 投稿タイプ別 CSS（自動読み込み）
+     * ----------------------------------------- */
+    if ( is_singular() || is_post_type_archive() ) {
+
+        $post_type = get_post_type();
+
+        // ============================
+        // ① 固定ページ（page）個別CSS
+        // ============================
+        if ( is_page() && !is_front_page() ) {
+            $page_single_css  = "/assets/css/single-page.css";
+            $page_single_path = $dir_path . $page_single_css;
+
+            if ( file_exists($page_single_path) ) {
                 wp_enqueue_style(
-                    "archive-post",
-                    $dir_uri . $post_archive_css,
-                    ['common-archive'],
-                    filemtime($post_archive_path)
+                    "ivr-single-page",
+                    $dir_uri . $page_single_css,
+                    ['ivr-page'],
+                    filemtime($page_single_path)
                 );
+            }
+        }
+
+        // ============================
+        // ② 通常投稿（post）
+        // ============================
+        if ( $post_type === 'post' ) {
+
+            // --- single-post.css ---
+            if ( is_single() ) {
+                $post_single_css  = "/assets/css/single-post.css";
+                $post_single_path = $dir_path . $post_single_css;
+
+                if ( file_exists($post_single_path) ) {
+                    wp_enqueue_style(
+                        "ivr-single-post",
+                        $dir_uri . $post_single_css,
+                        ['ivr-single'],
+                        filemtime($post_single_path)
+                    );
+                }
+            }
+
+            // --- archive-post.css（ブログ一覧）---
+            if ( is_home() || is_archive() ) {
+                $post_archive_css  = "/assets/css/archive-post.css";
+                $post_archive_path = $dir_path . $post_archive_css;
+
+                if ( file_exists($post_archive_path) ) {
+                    wp_enqueue_style(
+                        "ivr-archive-post",
+                        $dir_uri . $post_archive_css,
+                        ['ivr-archive'],
+                        filemtime($post_archive_path)
+                    );
+                }
+            }
+        }
+
+        // ============================
+        // ③ カスタム投稿タイプ
+        // ============================
+        if ( $post_type && !in_array($post_type, ['post', 'page']) ) {
+
+            // ---- single-POSTTYPE.css ----
+            if ( is_singular($post_type) ) {
+                $single_css  = "/assets/css/single-{$post_type}.css";
+                $single_path = $dir_path . $single_css;
+
+                if ( file_exists($single_path) ) {
+                    wp_enqueue_style(
+                        "ivr-single-{$post_type}",
+                        $dir_uri . $single_css,
+                        ['ivr-single'],
+                        filemtime($single_path)
+                    );
+                }
+            }
+
+            // ---- archive-POSTTYPE.css ----
+            if ( is_post_type_archive($post_type) ) {
+                $archive_css  = "/assets/css/archive-{$post_type}.css";
+                $archive_path = $dir_path . $archive_css;
+
+                if ( file_exists($archive_path) ) {
+                    wp_enqueue_style(
+                        "ivr-archive-{$post_type}",
+                        $dir_uri . $archive_css,
+                        ['ivr-archive'],
+                        filemtime($archive_path)
+                    );
+                }
             }
         }
     }
 
-    // ============================
-    // ③ カスタム投稿タイプ（既存処理）
-    // ============================
-    if ( $post_type && !in_array($post_type, ['post', 'page']) ) {
-
-        // ---- single-POSTTYPE.css ----
-        if ( is_singular($post_type) ) {
-            $single_css  = "/assets/css/single-{$post_type}.css";
-            $single_path = $dir_path . $single_css;
-
-            if ( file_exists($single_path) ) {
-                wp_enqueue_style(
-                    "single-{$post_type}",
-                    $dir_uri . $single_css,
-                    ['common-single'],
-                    filemtime($single_path)
-                );
-            }
-        }
-
-        // ---- archive-POSTTYPE.css ----
-        if ( is_post_type_archive($post_type) ) {
-            $archive_css  = "/assets/css/archive-{$post_type}.css";
-            $archive_path = $dir_path . $archive_css;
-
-            if ( file_exists($archive_path) ) {
-                wp_enqueue_style(
-                    "archive-{$post_type}",
-                    $dir_uri . $archive_css,
-                    ['common-archive'],
-                    filemtime($archive_path)
-                );
-            }
-        }
+    /* -----------------------------------------
+     * 8. テーマ共通 JS
+     * ----------------------------------------- */
+    $main_js_path = $dir_path . '/assets/js/main.js';
+    if ( file_exists($main_js_path) ) {
+        wp_enqueue_script(
+            'ivr-main',
+            $dir_uri . '/assets/js/main.js',
+            [],
+            filemtime($main_js_path),
+            true
+        );
     }
-}
-
 }
 
 add_action('wp_enqueue_scripts', 'ivr_enqueue_assets');

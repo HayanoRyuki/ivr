@@ -1,0 +1,554 @@
+@charset "UTF-8";
+/**
+ * =========================================
+ * common.css - サイト全体の共通スタイル
+ * =========================================
+ *
+ * このCSSはサイト全体で使用される基本スタイルを定義します。
+ * - フォントサイズはPX指定（rem/vw単位を避ける）
+ * - LP専用スタイル（.lp-connect）は含まない
+ */
+
+/* =========================================
+   1. CSS変数（カラー・フォント）
+========================================= */
+:root {
+  /* ブランドカラー */
+  --color-primary: #0098BB;
+  --color-primary-dark: #007a96;
+  --color-secondary: #EA526F;
+  --color-secondary-dark: #d43d5a;
+
+  /* テキストカラー */
+  --color-text: #2A2929;
+  --color-text-light: #413C3A;
+  --color-text-muted: #59514E;
+  --color-text-gray: #908883;
+
+  /* 背景色 */
+  --color-bg-white: #ffffff;
+  --color-bg-light: #F7F6F4;
+  --color-bg-primary-light: #E6F5F8;
+  --color-bg-primary-lighter: #F0F9FB;
+
+  /* ボーダー */
+  --color-border: #DDD9D7;
+
+  /* フォント */
+  --font-family-base: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  --font-family-en: "Roboto", sans-serif;
+
+  /* シャドウ */
+  --shadow-sm: 0px 1px 3px rgba(221, 217, 214, 0.64);
+  --shadow-md: 2px 2px 15px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 4px 4px 20px rgba(0, 0, 0, 0.07);
+
+  /* 角丸 */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 100vmax;
+
+  /* トランジション */
+  --transition-base: all 0.3s ease;
+}
+
+/* =========================================
+   2. ベーススタイル（html / body）
+========================================= */
+html {
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   3. タイポグラフィ
+========================================= */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+small {
+  font-size: 14px;
+}
+
+/* =========================================
+   4. リンク
+========================================= */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  opacity: 0.8;
+}
+
+a:visited {
+  color: var(--color-primary);
+}
+
+/* =========================================
+   5. 共通レイアウト
+========================================= */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.inner {
+  width: 100%;
+  max-width: 1048px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    max-width: 540px;
+    padding: 0 20px;
+  }
+}
+
+/* =========================================
+   6. サイトヘッダー（通常ページ用）
+========================================= */
+.site-header {
+  width: 100%;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+@media screen and (max-width: 767px) {
+  .site-header .container {
+    height: 60px;
+  }
+}
+
+.site-header .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.site-header .logo:hover {
+  opacity: 0.8;
+}
+
+/* =========================================
+   7. サイトフッター（通常ページ用）
+========================================= */
+.site-footer {
+  background-color: var(--color-bg-light);
+  padding: 40px 0;
+  margin-top: auto;
+}
+
+.site-footer .container {
+  text-align: center;
+}
+
+.site-footer .copyright {
+  font-size: 12px;
+  color: var(--color-text-gray);
+  font-family: var(--font-family-en);
+}
+
+/* =========================================
+   8. ボタン共通スタイル
+========================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.btn--primary {
+  background-color: var(--color-secondary);
+  color: #fff;
+  border-color: var(--color-secondary);
+}
+
+.btn--primary:hover {
+  background-color: #fff;
+  color: var(--color-secondary);
+}
+
+.btn--secondary {
+  background-color: #fff;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* =========================================
+   9. ユーティリティクラス
+========================================= */
+
+/* 表示切り替え */
+@media (min-width: 768px) {
+  .sp-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc-only {
+    display: none !important;
+  }
+}
+
+/* テキスト配置 */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* マージン */
+.mt-0 { margin-top: 0; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mt-40 { margin-top: 40px; }
+.mt-48 { margin-top: 48px; }
+.mt-60 { margin-top: 60px; }
+.mt-80 { margin-top: 80px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-40 { margin-bottom: 40px; }
+
+/* パディング */
+.py-40 { padding-top: 40px; padding-bottom: 40px; }
+.py-60 { padding-top: 60px; padding-bottom: 60px; }
+.py-80 { padding-top: 80px; padding-bottom: 80px; }
+
+/* 画像 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   10. フォーム要素
+========================================= */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-white);
+  transition: var(--transition-base);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 152, 187, 0.1);
+}
+
+/* =========================================
+   11. テーブル
+========================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  font-weight: 700;
+  background-color: var(--color-bg-light);
+}
+
+/* =========================================
+   12. WordPress コンテンツスタイル
+========================================= */
+.entry-content,
+.page-content,
+.single-content {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.entry-content h2,
+.page-content h2,
+.single-content h2 {
+  font-size: 28px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.entry-content h3,
+.page-content h3,
+.single-content h3 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.entry-content h4,
+.page-content h4,
+.single-content h4 {
+  font-size: 18px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.entry-content p,
+.page-content p,
+.single-content p {
+  margin-bottom: 24px;
+}
+
+.entry-content ul,
+.entry-content ol,
+.page-content ul,
+.page-content ol,
+.single-content ul,
+.single-content ol {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.entry-content li,
+.page-content li,
+.single-content li {
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.entry-content ul li {
+  list-style-type: disc;
+}
+
+.entry-content ol li {
+  list-style-type: decimal;
+}
+
+.entry-content blockquote,
+.page-content blockquote,
+.single-content blockquote {
+  margin: 24px 0;
+  padding: 24px;
+  background-color: var(--color-bg-light);
+  border-left: 4px solid var(--color-primary);
+}
+
+.entry-content img,
+.page-content img,
+.single-content img {
+  margin: 24px 0;
+  border-radius: var(--radius-sm);
+}
+
+.entry-content a,
+.page-content a,
+.single-content a {
+  text-decoration: underline;
+}
+
+.entry-content a:hover,
+.page-content a:hover,
+.single-content a:hover {
+  text-decoration: none;
+}
+
+/* コードブロック */
+.entry-content code,
+.page-content code,
+.single-content code {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 14px;
+  padding: 2px 6px;
+  background-color: var(--color-bg-light);
+  border-radius: 4px;
+}
+
+.entry-content pre,
+.page-content pre,
+.single-content pre {
+  margin: 24px 0;
+  padding: 20px;
+  background-color: #2A2929;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+}
+
+.entry-content pre code,
+.page-content pre code,
+.single-content pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #fff;
+}
+
+/* =========================================
+   13. レスポンシブ調整
+========================================= */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5, h6 {
+    font-size: 16px;
+  }
+
+  .entry-content h2,
+  .page-content h2,
+  .single-content h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .entry-content h3,
+  .page-content h3,
+  .single-content h3 {
+    font-size: 18px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+}

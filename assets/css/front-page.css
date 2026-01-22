@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/**
+ * =========================================
+ * front-page.css - TOPページ（LP）専用スタイル
+ * =========================================
+ *
+ * このCSSはTOPページ（front-page.php）でのみ読み込まれます。
+ * すべて .lp-connect プレフィックス付きのクラスで構成され、
+ * 他のページに影響を与えません。
+ */
+
 /* base（基本）設定
 ***************************************************************/
 .lp-connect {
@@ -9,7 +19,7 @@
 ***************************************************************/
 .fade-in-up {
   opacity: 0;
-  transform: translateY(2.5rem);
+  transform: translateY(40px);
   transition: opacity 1s, transform 1s;
 }
 .fade-in-up.is-in-view {
@@ -54,6 +64,7 @@
     display: none !important;
   }
 }
+
 /* セクション共通ボタン（基本・ピンク）
 ***************************************************************/
 .lp-connect__button {
@@ -75,7 +86,6 @@
   line-height: 1;
   transition: all 0.3s ease;
   text-decoration: none;
-  text-box: trim-both cap alphabetic;
 }
 @media (any-hover: hover) {
   .lp-connect__button:hover {
@@ -94,9 +104,9 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__button {
-    font-size: min(4.8vw, 18px);
-    width: min(89.3333333333vw, 335px);
-    height: min(16vw, 60px);
+    font-size: 18px;
+    width: 335px;
+    height: 60px;
     max-width: 100%;
   }
 }
@@ -147,7 +157,7 @@
 @media screen and (max-width: 767px) {
   .lp-connect__fv-cta .lp-connect__button {
     height: 48px;
-    font-size: min(3.7333333333vw, 14px);
+    font-size: 14px;
     gap: 0;
     box-shadow: none;
   }
@@ -160,7 +170,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__footer-cta-links .lp-connect__button {
-    width: min(89.3333333333vw, 335px);
+    width: 335px;
   }
 }
 
@@ -172,7 +182,7 @@
 @media screen and (max-width: 767px) {
   .lp-connect__fixed-cta .lp-connect__button {
     height: 48px;
-    font-size: min(3.7333333333vw, 14px);
+    font-size: 14px;
     gap: 0;
     box-shadow: none;
   }
@@ -205,12 +215,12 @@
 .lp-connect__section-head-title {
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.1111111111;
+  line-height: 1.11;
   color: #2A2929;
 }
 @media screen and (max-width: 767px) {
   .lp-connect__section-head-title {
-    font-size: min(8vw, 30px);
+    font-size: 30px;
     text-align: center;
     line-height: 1.3;
   }
@@ -225,6 +235,8 @@
   width: 100%;
   z-index: 100;
   background-color: #ffffff;
+  position: sticky;
+  top: 0;
 }
 
 .lp-connect__header-inner {
@@ -248,18 +260,18 @@
   display: inline-block;
 }
 .lp-connect__header-logo img {
-  width: min(14.7916666667vw, 213px);
+  width: 213px;
   height: auto;
   aspect-ratio: 213/56;
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__header-logo img {
-    width: min(18.0508474576vw, 213px);
+    width: 213px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__header-logo img {
-    width: min(42.6666666667vw, 160px);
+    width: 160px;
   }
 }
 
@@ -324,7 +336,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__header-button {
-    font-size: min(3.7333333333vw, 14px);
+    font-size: 14px;
   }
 }
 @media (any-hover: hover) {
@@ -334,13 +346,15 @@
     color: #EA526F;
   }
 }
-.lp-connect__header-button.lp-connect__header-button--trial, .lp-connect__header-button.lp-connect__header-button--login {
+.lp-connect__header-button.lp-connect__header-button--trial,
+.lp-connect__header-button.lp-connect__header-button--login {
   border: 2px solid #0098BB;
   background: #ffffff;
   color: #0098BB;
 }
 @media (any-hover: hover) {
-  .lp-connect__header-button.lp-connect__header-button--trial:hover, .lp-connect__header-button.lp-connect__header-button--login:hover {
+  .lp-connect__header-button.lp-connect__header-button--trial:hover,
+  .lp-connect__header-button.lp-connect__header-button--login:hover {
     border: 2px solid #0098BB;
     background: #0098BB;
     color: #fff;
@@ -406,12 +420,12 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__fv-title {
-    font-size: min(3.3898305085vw, 40px);
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__fv-title {
-    font-size: min(6.9333333333vw, 26px);
+    font-size: 26px;
     white-space: nowrap;
     font-feature-settings: "palt" 1;
     translate: -5px 0;
@@ -426,12 +440,12 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__fv-title .lp-connect__fv-title--large {
-    font-size: min(3.8983050847vw, 46px);
+    font-size: 46px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__fv-title .lp-connect__fv-title--large {
-    font-size: min(8vw, 30px);
+    font-size: 30px;
   }
 }
 
@@ -444,12 +458,12 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__fv-text {
-    font-size: min(1.5254237288vw, 18px);
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__fv-text {
-    font-size: min(4.2666666667vw, 16px);
+    font-size: 16px;
     margin-top: 37px;
   }
 }
@@ -478,7 +492,7 @@
 
 .lp-connect__fv-img {
   position: absolute;
-  max-width: min(55.9722222222vw, 806px);
+  max-width: 806px;
   bottom: -16px;
   left: calc(50% - 83px);
 }
@@ -527,19 +541,17 @@
   font-weight: 900;
   letter-spacing: 0.05em;
   line-height: 1;
-  text-box: trim-both cap alphabetic;
   color: #fff;
   z-index: 2;
   position: absolute;
   top: -15px;
   left: 50%;
   translate: -50% 0%;
-  width: -moz-max-content;
   width: max-content;
 }
 @media screen and (max-width: 767px) {
   .lp-connect__about-title {
-    font-size: min(6.9333333333vw, 26px);
+    font-size: 26px;
     top: -9px;
   }
 }
@@ -548,7 +560,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__about-title .lp-connect__about-title--small {
-    font-size: min(5.8666666667vw, 22px);
+    font-size: 22px;
   }
 }
 .lp-connect__about-title::before {
@@ -565,7 +577,7 @@
 @media screen and (max-width: 767px) {
   .lp-connect__about-title::before {
     background: url(../img/deco_about-bubble--sp.webp) no-repeat center center/contain;
-    width: min(89.3333333333vw, 335px);
+    width: 335px;
     height: 73px;
   }
 }
@@ -580,12 +592,12 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__about-concept {
-    font-size: min(2.8813559322vw, 34px);
+    font-size: 34px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__about-concept {
-    font-size: min(7.4666666667vw, 28px);
+    font-size: 28px;
     line-height: 1.6;
     letter-spacing: 0.02em;
     font-feature-settings: "palt" 1;
@@ -619,7 +631,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__about-card {
-    width: 77.6119402985%;
+    width: 77.6%;
     align-self: center;
     gap: 20px;
   }
@@ -665,16 +677,15 @@
   line-height: 1.6;
   color: #2A2929;
   text-align: center;
-  text-box: trim-both cap alphabetic;
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__about-card-text {
-    font-size: min(1.5254237288vw, 18px);
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__about-card-text {
-    font-size: min(4.8vw, 18px);
+    font-size: 18px;
   }
 }
 
@@ -714,7 +725,7 @@
 @media screen and (max-width: 767px) {
   .lp-connect__problem-title {
     padding-block: 7px 27px;
-    font-size: min(5.8666666667vw, 22px);
+    font-size: 22px;
     font-feature-settings: "palt" 1;
   }
 }
@@ -732,7 +743,7 @@
 @media screen and (max-width: 767px) {
   .lp-connect__problem-title::before {
     background: url(../img/deco_problem-bubble--sp.webp) no-repeat center center/contain;
-    width: min(89.3333333333vw, 335px);
+    width: 335px;
     height: 75px;
   }
 }
@@ -743,15 +754,15 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__problem-title--large {
-    font-size: min(6.9333333333vw, 26px);
-    line-height: 1.5384615385;
+    font-size: 26px;
+    line-height: 1.54;
   }
 }
 
 .lp-connect__problem-contents {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 3.2989690722%;
+  gap: 3.3%;
   margin-top: 106px;
 }
 @media screen and (max-width: 767px) {
@@ -788,16 +799,16 @@
   top: -59px;
   left: 50%;
   translate: -50% 0;
-  width: 88.4105960265%;
+  width: 88.4%;
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__problem-card-comment {
-    font-size: min(1.6949152542vw, 20px);
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__problem-card-comment {
-    font-size: min(5.3333333333vw, 20px);
+    font-size: 20px;
   }
 }
 .lp-connect__problem-card-comment::before {
@@ -853,13 +864,13 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__problem-card-text {
-    font-size: min(1.6949152542vw, 20px);
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__problem-card-text {
     margin-top: 64px;
-    font-size: min(5.3333333333vw, 20px);
+    font-size: 20px;
   }
 }
 
@@ -872,17 +883,16 @@
   text-decoration-line: underline;
   text-decoration-thickness: 10px;
   text-underline-offset: 0px;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__problem-card-text--large {
-    font-size: min(2.0338983051vw, 24px);
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__problem-card-text--large {
-    font-size: min(6.4vw, 24px);
+    font-size: 24px;
     text-decoration-thickness: 7px;
     text-underline-offset: 0px;
   }
@@ -920,7 +930,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__function-intro {
-    font-size: min(4.8vw, 18px);
+    font-size: 18px;
     margin-top: 16px;
     letter-spacing: -0.03em;
   }
@@ -932,7 +942,7 @@
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px 3.4090909091%;
+  gap: 32px 3.4%;
   margin-top: 40px;
 }
 @media screen and (max-width: 767px) {
@@ -972,12 +982,12 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__function-card-title {
-    font-size: min(1.6949152542vw, 20px);
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__function-card-title {
-    font-size: min(5.3333333333vw, 20px);
+    font-size: 20px;
   }
 }
 
@@ -1007,7 +1017,7 @@
 .lp-connect__recommend-contents {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px 3.4090909091%;
+  gap: 32px 3.4%;
   justify-content: center;
   align-items: stretch;
   margin-top: 48px;
@@ -1021,14 +1031,13 @@
 }
 
 .lp-connect__recommend-card {
-  width: 30.9917355372%;
+  width: 31%;
   box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   display: inline-flex;
-  border-radius: 20px;
   overflow: hidden;
 }
 @media screen and (max-width: 767px) {
@@ -1041,8 +1050,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 301/202;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .lp-connect__recommend-card-body {
@@ -1058,12 +1066,12 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__recommend-card-title {
-    font-size: min(1.6949152542vw, 20px);
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__recommend-card-title {
-    font-size: min(5.3333333333vw, 20px);
+    font-size: 20px;
   }
 }
 
@@ -1077,12 +1085,12 @@
 }
 @media screen and (max-width: 1180px) {
   .lp-connect__recommend-card-text {
-    font-size: min(1.3559322034vw, 16px);
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 767px) {
   .lp-connect__recommend-card-text {
-    font-size: min(4.2666666667vw, 16px);
+    font-size: 16px;
   }
 }
 
@@ -1158,7 +1166,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__faq-item-question {
-    font-size: min(5.3333333333vw, 20px);
+    font-size: 20px;
   }
 }
 .lp-connect__faq-item-question::before {
@@ -1177,7 +1185,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__faq-item-answer {
-    font-size: min(4.8vw, 18px);
+    font-size: 18px;
   }
 }
 
@@ -1213,7 +1221,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-intro {
-    font-size: min(4.8vw, 18px);
+    font-size: 18px;
     margin-top: 16px;
   }
 }
@@ -1276,7 +1284,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-card-title {
-    font-size: min(4.5333333333vw, 17px);
+    font-size: 17px;
   }
 }
 
@@ -1314,7 +1322,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-card-number {
-    font-size: min(9.6vw, 36px);
+    font-size: 36px;
   }
 }
 
@@ -1326,7 +1334,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-card-unit {
-    font-size: min(5.3333333333vw, 20px);
+    font-size: 20px;
   }
 }
 
@@ -1338,7 +1346,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-card-unit--mini {
-    font-size: min(4.2666666667vw, 16px);
+    font-size: 16px;
   }
 }
 
@@ -1363,7 +1371,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-babble {
-    font-size: min(4.2666666667vw, 16px);
+    font-size: 16px;
     border-radius: 16px;
     padding: 14px 0 14px 13px;
   }
@@ -1396,7 +1404,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-attention-text {
-    font-size: min(4.2666666667vw, 16px);
+    font-size: 16px;
   }
 }
 .lp-connect__price-attention-text.lp-connect__price-attention-text--bold {
@@ -1462,9 +1470,8 @@
 .lp-connect__footer-cta {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 41.5289256198%;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  grid-template-columns: 1fr 41.5%;
+  column-gap: 20px;
   row-gap: 32px;
   grid-auto-rows: auto;
   grid-template-areas: "title banner" "text banner" "links banner";
@@ -1486,7 +1493,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__footer-title {
-    font-size: min(8vw, 30px);
+    font-size: 30px;
     line-height: 1.3;
     text-align: center;
   }
@@ -1506,7 +1513,7 @@
 }
 @media screen and (max-width: 767px) {
   .lp-connect__footer-cta-text {
-    font-size: min(3.7333333333vw, 14px);
+    font-size: 14px;
   }
 }
 
@@ -1537,8 +1544,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: 118px 1fr;
-  -moz-column-gap: 8.2644628099%;
-       column-gap: 8.2644628099%;
+  column-gap: 8.3%;
   row-gap: 16px;
   grid-auto-rows: auto;
   grid-template-areas: "marks logo" "marks nav" "marks copyright";
@@ -1547,9 +1553,8 @@
 @media screen and (max-width: 767px) {
   .lp-connect__footer-bottom {
     margin-top: 40px;
-    grid-template-columns: 1fr 31.1377245509%;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    grid-template-columns: 1fr 31.1%;
+    column-gap: 40px;
     row-gap: 0;
     grid-template-areas: "nav nav" "logo marks" "copyright marks";
   }
@@ -1601,7 +1606,7 @@
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.7142857143;
+  line-height: 1.71;
   padding-inline: 4px;
   color: #413C3A;
   text-decoration: none;
@@ -1630,13 +1635,6 @@
     gap: 0;
     margin-top: 10px;
   }
-}
-/*# sourceMappingURL=style.css.map */
-
-
-.lp-connect__header {
-  position: sticky;
-  top: 0;
 }
 
 /* =========================================
