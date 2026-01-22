@@ -1,16 +1,16 @@
 <?php
 /**
- * Archive Template: Case（導入事例一覧）
+ * Archive Template: Event（イベント・セミナー一覧）
  */
 get_header();
 ?>
 
-<main class="archive archive-case">
+<main class="archive archive-event">
   <div class="archive-container">
 
     <header class="archive-header">
-      <h1 class="archive-title">導入事例</h1>
-      <p class="archive-description">代表電話コネクトを導入いただいた企業様の事例をご紹介します。</p>
+      <h1 class="archive-title">イベント・セミナー</h1>
+      <p class="archive-description">代表電話コネクトに関するイベント・セミナー情報をお届けします。</p>
     </header>
 
     <?php if ( have_posts() ) : ?>
@@ -19,6 +19,9 @@ get_header();
         <?php
         while ( have_posts() ) :
           the_post();
+
+          // イベント日時のカスタムフィールド（あれば）
+          $event_date = get_post_meta( get_the_ID(), 'event_date', true );
         ?>
           <article class="archive-card">
             <a href="<?php the_permalink(); ?>">
@@ -34,9 +37,15 @@ get_header();
 
               <div class="archive-card-body">
                 <div class="archive-card-meta">
-                  <time class="archive-card-date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
-                    <?php echo get_the_date('Y.m.d'); ?>
-                  </time>
+                  <?php if ( $event_date ) : ?>
+                    <span class="archive-card-event-date">
+                      開催日: <?php echo esc_html( $event_date ); ?>
+                    </span>
+                  <?php else : ?>
+                    <time class="archive-card-date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+                      <?php echo get_the_date('Y.m.d'); ?>
+                    </time>
+                  <?php endif; ?>
                 </div>
                 <h2 class="archive-card-title"><?php the_title(); ?></h2>
                 <?php if ( has_excerpt() ) : ?>
@@ -61,7 +70,7 @@ get_header();
     <?php else : ?>
 
       <div class="archive-no-posts">
-        <p class="archive-no-posts-text">まだ導入事例がありません。</p>
+        <p class="archive-no-posts-text">現在予定しているイベント・セミナーはありません。</p>
         <a href="<?php echo home_url('/'); ?>" class="archive-no-posts-link">
           トップページへ戻る
         </a>

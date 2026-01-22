@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/**
+ * =========================================
+ * archive.css - アーカイブページ共通スタイル
+ * =========================================
+ *
+ * このCSSはアーカイブページ（archive.php）で読み込まれます。
+ * フォントサイズはPX指定で統一。
+ */
+
+/* =========================================
+   1. メインレイアウト
+========================================= */
+.archive,
+.archive-wrap {
+  padding: 60px 20px 80px;
+  min-height: calc(100vh - 200px);
+}
+
+@media screen and (max-width: 767px) {
+  .archive,
+  .archive-wrap {
+    padding: 40px 16px 60px;
+  }
+}
+
+/* =========================================
+   2. コンテナ
+========================================= */
+.archive-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   3. アーカイブタイトル
+========================================= */
+.archive-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #2A2929;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .archive-title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+}
+
+/* =========================================
+   4. 記事一覧グリッド
+========================================= */
+.archive-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .archive-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .archive-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* =========================================
+   5. 記事カード
+========================================= */
+.archive-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.archive-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.archive-card-thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-card-thumbnail img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.archive-card:hover .archive-card-thumbnail img {
+  transform: scale(1.05);
+}
+
+.archive-card-body {
+  padding: 20px;
+}
+
+.archive-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.archive-card-category {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0098BB;
+  background-color: #E6F5F8;
+  border-radius: 4px;
+}
+
+.archive-card-date {
+  font-size: 12px;
+  color: #908883;
+}
+
+.archive-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2A2929;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .archive-card-title {
+    font-size: 16px;
+  }
+}
+
+.archive-card-excerpt {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #59514E;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================================
+   6. ページネーション
+========================================= */
+.archive-pagination {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .archive-pagination {
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+}
+
+.archive-pagination .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2A2929;
+  background-color: #fff;
+  border: 1px solid #DDD9D7;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.archive-pagination .page-numbers:hover {
+  border-color: #0098BB;
+  color: #0098BB;
+}
+
+.archive-pagination .page-numbers.current {
+  background-color: #0098BB;
+  border-color: #0098BB;
+  color: #fff;
+}
+
+.archive-pagination .prev,
+.archive-pagination .next {
+  padding: 0 16px;
+}
+
+/* =========================================
+   7. 投稿がない場合
+========================================= */
+.archive-no-posts {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.archive-no-posts-text {
+  font-size: 18px;
+  color: #59514E;
+  margin-bottom: 24px;
+}
+
+.archive-no-posts-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0098BB;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.archive-no-posts-link:hover {
+  opacity: 0.7;
+}

@@ -1,12 +1,288 @@
-/* 固定ページだけの調整を書く */
+@charset "UTF-8";
+/**
+ * =========================================
+ * page.css - 固定ページ共通スタイル
+ * =========================================
+ *
+ * このCSSは固定ページ（page.php）で読み込まれます。
+ * フォントサイズはPX指定で統一。
+ */
 
-.page-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+/* =========================================
+   1. メインレイアウト
+========================================= */
+.page-wrap {
+  padding: 60px 20px 80px;
+  min-height: calc(100vh - 200px);
 }
 
-.page-content {
-  max-width: 800px;
+@media screen and (max-width: 767px) {
+  .page-wrap {
+    padding: 40px 16px 60px;
+  }
+}
+
+/* =========================================
+   2. コンテナ
+========================================= */
+.page-container {
+  max-width: 900px;
   margin: 0 auto;
+}
+
+/* =========================================
+   3. ページタイトル
+========================================= */
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #2A2929;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #0098BB;
+}
+
+@media screen and (max-width: 767px) {
+  .page-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+  }
+}
+
+/* =========================================
+   4. コンテンツ本文
+========================================= */
+.page-content {
+  font-size: 16px;
   line-height: 1.8;
+  color: #413C3A;
+}
+
+.page-content h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2A2929;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E6F5F8;
+}
+
+.page-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2A2929;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.page-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2A2929;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.page-content p {
+  margin-bottom: 24px;
+}
+
+.page-content ul,
+.page-content ol {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.page-content ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.page-content ol li {
+  list-style-type: decimal;
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.page-content blockquote {
+  margin: 24px 0;
+  padding: 24px;
+  background-color: #F7F6F4;
+  border-left: 4px solid #0098BB;
+  font-style: italic;
+}
+
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 24px 0;
+  border-radius: 8px;
+}
+
+.page-content a {
+  color: #0098BB;
+  text-decoration: underline;
+}
+
+.page-content a:hover {
+  text-decoration: none;
+}
+
+.page-content table {
+  width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+}
+
+.page-content th,
+.page-content td {
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid #DDD9D7;
+}
+
+.page-content th {
+  font-weight: 700;
+  background-color: #F7F6F4;
+}
+
+@media screen and (max-width: 767px) {
+  .page-content h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  .page-content h3 {
+    font-size: 18px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  .page-content h4 {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+/* =========================================
+   5. お問い合わせフォームなど
+========================================= */
+.page-form {
+  margin-top: 40px;
+}
+
+.page-form-row {
+  margin-bottom: 24px;
+}
+
+.page-form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2A2929;
+  margin-bottom: 8px;
+}
+
+.page-form-label .required {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #EA526F;
+  border-radius: 4px;
+}
+
+.page-form input[type="text"],
+.page-form input[type="email"],
+.page-form input[type="tel"],
+.page-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #DDD9D7;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-form input[type="text"]:focus,
+.page-form input[type="email"]:focus,
+.page-form input[type="tel"]:focus,
+.page-form textarea:focus {
+  outline: none;
+  border-color: #0098BB;
+  box-shadow: 0 0 0 3px rgba(0, 152, 187, 0.1);
+}
+
+.page-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.page-form-submit {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.page-form-submit button,
+.page-form-submit input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0098BB;
+  border: 2px solid #0098BB;
+  border-radius: 100vmax;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-form-submit button:hover,
+.page-form-submit input[type="submit"]:hover {
+  background-color: #fff;
+  color: #0098BB;
+}
+
+/* =========================================
+   6. プライバシーポリシーなど長文ページ
+========================================= */
+.page-legal .page-content {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.page-legal .page-content h2 {
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+.page-legal .page-content h3 {
+  font-size: 18px;
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .page-legal .page-content {
+    font-size: 14px;
+  }
+
+  .page-legal .page-content h2 {
+    font-size: 18px;
+  }
+
+  .page-legal .page-content h3 {
+    font-size: 16px;
+  }
 }
