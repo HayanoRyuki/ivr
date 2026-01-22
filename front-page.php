@@ -251,42 +251,52 @@
         <div class="lp-connect__recommend-contents js-in-view fade-in-up">
 
           <?php
-          $recommend_imgs = [
-            'img_recommend01.webp',
-            'img_recommend02.webp',
-            'img_recommend03.webp',
-            'img_recommend04.webp',
-            'img_recommend05.webp'
+          // 6つの活用シーン
+          $recommends = [
+            [
+              'img'   => 'img_recommend01.webp',
+              'title' => '固定電話をなくしたい',
+              'text'  => '全社員への携帯端末の貸与やフリーアドレス化により、固定電話が不要になった。'
+            ],
+            [
+              'img'   => 'img_recommend02.webp',
+              'title' => 'ハイブリッドワーク',
+              'text'  => '出社メンバーにだけ代表電話対応が発生してしまうのを避けたい。'
+            ],
+            [
+              'img'   => 'img_recommend01.webp',  // TODO: 画像差し替え
+              'title' => '各部門あての電話',
+              'text'  => '各部門あての電話の取次をなくし、それぞれの部門で電話対応を完結してほしい。'
+            ],
+            [
+              'img'   => 'img_recommend03.webp',
+              'title' => 'オフィス不在時の対応',
+              'text'  => '平日の事務所に誰もいない、深夜など営業時間外の電話もリアルタイム確認したい。'
+            ],
+            [
+              'img'   => 'img_recommend04.webp',
+              'title' => '外線番号の棚卸し',
+              'text'  => '外線番号が複数あるが、実際にどのくらい使われているのかわからないのでログを取りたい。'
+            ],
+            [
+              'img'   => 'img_recommend05.webp',
+              'title' => '電話が苦手な若手社員が多い',
+              'text'  => '若手社員が電話に出てくれない・慣れていないので用件を正確に伝えられない。'
+            ],
           ];
 
-          $recommend_titles = [
-            '固定電話をなくしたい',
-            'ハイブリッドワーク',
-            'オフィス不在時の対応',
-            '外線番号の棚卸し',
-            '電話が苦手な若手社員が多い'
-          ];
-
-          $recommend_texts = [
-            '全社員への携帯端末の貸与やフリーアドレス化により、固定電話が不要になった。',
-            '出社メンバーにだけ代表電話対応が発生してしまうのを避けたい。',
-            '平日の事務所に誰もいない、深夜など営業時間外の電話もリアルタイム確認したい。',
-            '外線番号が複数あるが、実際にどのくらい使われているのかわからないのでログを取りたい。',
-            '若手社員が電話に出てくれない・慣れていないので用件を正確に伝えられない。'
-          ];
-
-          for ($i = 0; $i < 5; $i++) : ?>
+          foreach ($recommends as $item) : ?>
             <div class="lp-connect__recommend-card">
               <div class="lp-connect__recommend-card-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $recommend_imgs[$i]; ?>"
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $item['img']; ?>"
                      loading="lazy" width="602" height="404" alt="">
               </div>
               <div class="lp-connect__recommend-card-body">
-                <h3 class="lp-connect__recommend-card-title"><?php echo $recommend_titles[$i]; ?></h3>
-                <p class="lp-connect__recommend-card-text"><?php echo $recommend_texts[$i]; ?></p>
+                <h3 class="lp-connect__recommend-card-title"><?php echo $item['title']; ?></h3>
+                <p class="lp-connect__recommend-card-text"><?php echo $item['text']; ?></p>
               </div>
             </div>
-          <?php endfor; ?>
+          <?php endforeach; ?>
 
         </div>
 
