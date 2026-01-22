@@ -332,17 +332,17 @@
 
           <div class="lp-connect__faq-item">
             <h3 class="lp-connect__faq-item-question">音声ガイダンスの内容は変更できますか？</h3>
-            <p class="lp-connect__faq-item-answer">現時点では変更することはできませんが、今後変更できるようになる予定です。</p>
+            <p class="lp-connect__faq-item-answer">はい。ガイダンス内容は自由にカスタマイズ可能です。</p>
           </div>
 
           <div class="lp-connect__faq-item">
-            <h3 class="lp-connect__faq-item-question">通話内容の録音データはダウンロードできますか？</h3>
-            <p class="lp-connect__faq-item-answer">Web管理画面からダウンロード可能です。</p>
+            <h3 class="lp-connect__faq-item-question">用件に合わせて、自動音声対応を分岐できますか？</h3>
+            <p class="lp-connect__faq-item-answer">はい。用件に合わせたプッシュ番号を指定することで、分岐が可能です。</p>
           </div>
 
           <div class="lp-connect__faq-item">
-            <h3 class="lp-connect__faq-item-question">複数外線 → 1つの050番号に転送できますか？</h3>
-            <p class="lp-connect__faq-item-answer">可能ですが、どの外線番号からかの識別はできません。識別したい場合は番号を分けてください。</p>
+            <h3 class="lp-connect__faq-item-question">用件に合わせて、担当者に電話を転送できますか？</h3>
+            <p class="lp-connect__faq-item-answer">はい。予め指定した電話番号に転送することが可能です。</p>
           </div>
 
           <div class="lp-connect__faq-item">
