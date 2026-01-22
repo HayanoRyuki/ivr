@@ -381,52 +381,43 @@
         </div>
 
         <p class="lp-connect__price-intro js-in-view fade-in-up">
-          着信時の通話料・文字起こし・チャット通知など、すべて込みの定額料金です。
+          着信時の通話料・文字起こし・チャット通知など、基本機能すべて込みの定額料金です。
         </p>
 
-        <div class="lp-connect__price-contents js-in-view fade-in-up">
-
-          <div class="lp-connect__price-card">
-            <div class="lp-connect__price-card-head">
-              <h3 class="lp-connect__price-card-title">Receptionist<br>登録社員数</h3>
-            </div>
-            <div class="lp-connect__price-card-body">
-              <div class="lp-connect__price-card-detail">
-                <span class="lp-connect__price-card-number">50</span>
-                <span class="lp-connect__price-card-unit">人ごと</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="lp-connect__price-card">
-            <div class="lp-connect__price-card-head">
-              <h3 class="lp-connect__price-card-title">代表電話コネクト<br>月額料金（税抜）</h3>
-            </div>
-            <div class="lp-connect__price-card-body">
-              <div class="lp-connect__price-card-detail">
-                <span class="lp-connect__price-card-number">5,000</span>
-                <span class="lp-connect__price-card-unit">円</span>
-                <span class="lp-connect__price-card-unit--mini">/ 月・番号</span>
-              </div>
-            </div>
-          </div>
-
+        <div class="lp-connect__price-table-wrap js-in-view fade-in-up">
+          <table class="lp-connect__price-table">
+            <thead>
+              <tr>
+                <th class="lp-connect__price-table-th">月間受電回数</th>
+                <th class="lp-connect__price-table-th">RECEPTIONIST契約済企業<br>月額基本料金（税抜）</th>
+                <th class="lp-connect__price-table-th">RECEPTIONIST未契約企業<br>月額基本料金（税抜）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="lp-connect__price-table-td">100回まで</td>
+                <td class="lp-connect__price-table-td"><span class="lp-connect__price-table-number">5,000</span>円<span class="lp-connect__price-table-unit">/月・番号</span></td>
+                <td class="lp-connect__price-table-td"><span class="lp-connect__price-table-number">7,000</span>円<span class="lp-connect__price-table-unit">/月・番号</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="lp-connect__price-babble js-in-view fade-in-up">
-          <span class="lp-connect__price-babble-example">例）</span>
-          <p class="lp-connect__price-babble-text">
-            RECEPTIONIST登録社員数が120名で取得番号1つの場合、<br class="lp-connect__sp-only">
-            5,000円 × 3 = 15,000円
+        <div class="lp-connect__price-example js-in-view fade-in-up">
+          <span class="lp-connect__price-example-label">例）</span>
+          <p class="lp-connect__price-example-text">
+            RECEPTIONIST契約済企業様で、月間受電回数がおおよそ200回前後の場合、<br class="lp-connect__pc-only">
+            5,000円×2＝10,000円/月
           </p>
         </div>
 
         <div class="lp-connect__price-attention js-in-view fade-in-up">
-          <p class="lp-connect__price-attention-text lp-connect__price-attention-text--bold">
-            ※ 200名以上はボリュームディスカウントでお見積もりします。
+          <p class="lp-connect__price-attention-text">
+            ※予め貴社より申請いただいた受電回数に基づいて、料金を決定いたします。<br class="lp-connect__pc-only">
+            　受電回数が、申請いただいた回数より超過する月が連続した場合、料金プランを見直させていただきます。
           </p>
           <p class="lp-connect__price-attention-text">
-            ※ RECEPTIONISTオプション機能のため、ご利用企業のみ利用可能です。
+            ※用件振り分け等による応答フローの分岐カスタマイズが必要な場合は、別途オプション料金が発生します。詳細はお問い合わせくださいませ。
           </p>
         </div>
 

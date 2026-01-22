@@ -1428,19 +1428,137 @@
   z-index: 1;
 }
 
+/* 料金テーブル（新） */
+.lp-connect__price-table-wrap {
+  margin-top: 48px;
+  overflow-x: auto;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-table-wrap {
+    margin-top: 32px;
+  }
+}
+
+.lp-connect__price-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #0098BB;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.lp-connect__price-table-th {
+  background: #fff;
+  color: #0098BB;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 20px 16px;
+  border-bottom: 2px solid #0098BB;
+  text-align: center;
+}
+.lp-connect__price-table-th:not(:last-child) {
+  border-right: 1px dashed #DDD9D7;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-table-th {
+    font-size: 14px;
+    padding: 14px 10px;
+  }
+}
+
+.lp-connect__price-table-td {
+  background: #E9FBFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 24px 16px;
+  text-align: center;
+  color: #191817;
+}
+.lp-connect__price-table-td:not(:last-child) {
+  border-right: 1px dashed #DDD9D7;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-table-td {
+    font-size: 16px;
+    padding: 16px 10px;
+  }
+}
+
+.lp-connect__price-table-number {
+  font-size: 36px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-table-number {
+    font-size: 28px;
+  }
+}
+
+.lp-connect__price-table-unit {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-table-unit {
+    font-size: 14px;
+  }
+}
+
+/* 料金例（新） */
+.lp-connect__price-example {
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: #fff;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-example {
+    padding: 16px;
+    margin-top: 24px;
+  }
+}
+
+.lp-connect__price-example-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #191817;
+  margin-right: 8px;
+}
+
+.lp-connect__price-example-text {
+  display: inline;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #413C3A;
+}
+@media screen and (max-width: 767px) {
+  .lp-connect__price-example-text {
+    display: block;
+    margin-top: 8px;
+    font-size: 15px;
+  }
+}
+
 .lp-connect__price-attention {
   margin-top: 24px;
 }
 
 .lp-connect__price-attention-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #413C3A;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
   font-weight: 400;
+}
+.lp-connect__price-attention-text + .lp-connect__price-attention-text {
+  margin-top: 12px;
 }
 @media screen and (max-width: 767px) {
   .lp-connect__price-attention-text {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 .lp-connect__price-attention-text.lp-connect__price-attention-text--bold {
