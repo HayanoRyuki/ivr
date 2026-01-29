@@ -552,3 +552,327 @@ th {
     margin-bottom: 12px;
   }
 }
+
+/* =========================================
+   14. フォームコンポーネント（資料請求・お問い合わせ）
+========================================= */
+
+/* Honeypot（スパム対策用隠しフィールド） */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* フォーム全体 */
+.ivr-form {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* フォームグループ */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group--name {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group--name .form-group__item {
+  flex: 1;
+}
+
+.form-group--submit {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.form-group--privacy {
+  margin-top: 32px;
+}
+
+/* ラベル */
+.form-label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.form-label .required {
+  color: var(--color-secondary);
+  margin-left: 4px;
+}
+
+/* フィールドセット */
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-fieldset legend {
+  padding: 0;
+}
+
+/* 入力フィールド */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 152, 187, 0.15);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-gray);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ラジオボタン */
+.form-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 8px;
+}
+
+.form-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.form-radio input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* チェックボックス */
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-checkbox a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.form-checkbox a:hover {
+  text-decoration: none;
+}
+
+/* 送信ボタン */
+.form-submit-btn {
+  min-width: 240px;
+  padding: 18px 40px;
+  font-size: 18px;
+}
+
+/* エラー・成功メッセージ */
+.form-error {
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: var(--radius-sm);
+  color: #DC2626;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.form-success {
+  padding: 24px;
+  margin-bottom: 24px;
+  background-color: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: var(--radius-sm);
+  color: #16A34A;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 767px) {
+  .form-group--name {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .form-radio-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-submit-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* =========================================
+   15. サンクスページ
+========================================= */
+
+.thanks-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.thanks-container {
+  max-width: 600px;
+  text-align: center;
+}
+
+.thanks-icon {
+  margin-bottom: 32px;
+  color: var(--color-primary);
+}
+
+.thanks-icon svg {
+  width: 80px;
+  height: 80px;
+}
+
+.thanks-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.thanks-message {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  color: var(--color-text);
+}
+
+.thanks-note {
+  padding: 20px 24px;
+  background-color: var(--color-bg-gray);
+  border-radius: var(--radius-sm);
+  margin-bottom: 40px;
+}
+
+.thanks-note p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text-gray);
+  margin: 0;
+}
+
+.thanks-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks-page {
+    padding: 60px 16px;
+  }
+
+  .thanks-title {
+    font-size: 22px;
+  }
+
+  .thanks-icon svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* =========================================
+   16. フォームページレイアウト
+========================================= */
+
+.form-page__header {
+  padding: 60px 20px;
+  background-color: var(--color-bg-gray);
+  text-align: center;
+}
+
+.form-page__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.form-page__lead {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-gray);
+}
+
+.form-page__body {
+  padding: 60px 20px 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .form-page__header {
+    padding: 40px 16px;
+  }
+
+  .form-page__title {
+    font-size: 24px;
+  }
+
+  .form-page__lead {
+    font-size: 14px;
+  }
+
+  .form-page__body {
+    padding: 40px 16px 60px;
+  }
+}

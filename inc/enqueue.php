@@ -213,6 +213,25 @@ function ivr_enqueue_assets() {
             true
         );
     }
+
+    /* -----------------------------------------
+     * 9. フォームハンドラー JS
+     * ----------------------------------------- */
+    $form_handler_path = $dir_path . '/assets/js/form-handler.js';
+    if ( file_exists($form_handler_path) ) {
+        wp_enqueue_script(
+            'ivr-form-handler',
+            $dir_uri . '/assets/js/form-handler.js',
+            [],
+            filemtime($form_handler_path),
+            true
+        );
+
+        // AJAX URL をJSに渡す
+        wp_localize_script('ivr-form-handler', 'ivrFormConfig', [
+            'ajaxUrl' => admin_url('admin-ajax.php'),
+        ]);
+    }
 }
 
 add_action('wp_enqueue_scripts', 'ivr_enqueue_assets');

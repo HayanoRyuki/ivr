@@ -7,6 +7,12 @@ require_once get_template_directory() . '/inc/enqueue.php';
 require_once get_template_directory() . '/inc/post-types.php';
 // 導入事例（case）外部確認機能
 require_once get_template_directory() . '/inc/case-functions.php';
+// reCAPTCHA v3 設定
+require_once get_template_directory() . '/inc/recaptcha.php';
+// Pardot 連携
+require_once get_template_directory() . '/inc/pardot.php';
+// フォーム送信処理
+require_once get_template_directory() . '/inc/form-handler.php';
 
 // ============================================
 // 外部確認URLの閲覧制御（Public Post Preview方式）
