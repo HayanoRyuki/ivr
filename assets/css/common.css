@@ -876,3 +876,16 @@ th {
     padding: 40px 16px 60px;
   }
 }
+
+/* =========================================
+   17. シンプルフッター（フォームページ用）
+========================================= */
+
+.lp-connect__footer--simple {
+  padding-top: 40px;
+}
+
+.lp-connect__footer--simple .lp-connect__footer-bottom {
+  padding-top: 0;
+  border-top: none;
+}
