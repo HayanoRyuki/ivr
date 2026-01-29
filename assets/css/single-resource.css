@@ -283,3 +283,87 @@
     gap: 16px;
   }
 }
+
+/* =========================================
+   資料情報（メタボックス表示）
+========================================= */
+.resource-info {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.resource-info__row {
+  padding: 16px 20px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.resource-info__row:last-child {
+  border-bottom: none;
+}
+
+/* サマリー行（ページ数・最終更新日） */
+.resource-info__row--summary {
+  display: flex;
+  gap: 32px;
+  background: #F7F6F4;
+}
+
+.resource-info__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resource-info__label {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0098BB;
+  background: #E8F6F9;
+  border-radius: 4px;
+}
+
+.resource-info__label--block {
+  display: block;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.resource-info__value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2A2929;
+}
+
+.resource-info__text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #413C3A;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .resource-info__row--summary {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .resource-info__row {
+    padding: 14px 16px;
+  }
+
+  .resource-info__label {
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+
+  .resource-info__value,
+  .resource-info__text {
+    font-size: 14px;
+  }
+}

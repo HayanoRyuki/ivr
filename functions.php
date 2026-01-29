@@ -5,6 +5,8 @@ require_once get_template_directory() . '/inc/setup.php';
 require_once get_template_directory() . '/inc/enqueue.php';
 // カスタム投稿タイプ
 require_once get_template_directory() . '/inc/post-types.php';
+// 資料（resource）メタボックス
+require_once get_template_directory() . '/inc/resource-meta.php';
 // 導入事例（case）外部確認機能
 require_once get_template_directory() . '/inc/case-functions.php';
 // reCAPTCHA v3 設定

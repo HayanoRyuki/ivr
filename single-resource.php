@@ -19,11 +19,6 @@ get_header('resource');
       <article <?php post_class(); ?>>
 
         <header class="single-header">
-          <div class="single-meta">
-            <time class="single-date" datetime="<?php echo get_the_date('Y-m-d'); ?>">
-              <?php echo get_the_date('Y年m月d日'); ?>
-            </time>
-          </div>
           <h1 class="single-title"><?php the_title(); ?></h1>
         </header>
 
@@ -31,6 +26,51 @@ get_header('resource');
           <div class="single-thumbnail">
             <?php the_post_thumbnail('large'); ?>
           </div>
+        <?php endif; ?>
+
+        <?php
+        // メタボックスデータを取得
+        $resource_meta = ivr_get_resource_meta();
+        ?>
+
+        <?php if ($resource_meta['page_count'] || $resource_meta['last_updated']) : ?>
+        <div class="resource-info">
+          <div class="resource-info__row resource-info__row--summary">
+            <?php if ($resource_meta['page_count']) : ?>
+              <div class="resource-info__item">
+                <span class="resource-info__label">ページ数</span>
+                <span class="resource-info__value"><?php echo esc_html($resource_meta['page_count']); ?></span>
+              </div>
+            <?php endif; ?>
+            <?php if ($resource_meta['last_updated']) : ?>
+              <div class="resource-info__item">
+                <span class="resource-info__label">最終更新日</span>
+                <span class="resource-info__value"><?php echo esc_html(ivr_format_resource_date($resource_meta['last_updated'])); ?></span>
+              </div>
+            <?php endif; ?>
+          </div>
+
+          <?php if ($resource_meta['target']) : ?>
+          <div class="resource-info__row">
+            <span class="resource-info__label resource-info__label--block">対象者</span>
+            <p class="resource-info__text"><?php echo nl2br(esc_html($resource_meta['target'])); ?></p>
+          </div>
+          <?php endif; ?>
+
+          <?php if ($resource_meta['main_content']) : ?>
+          <div class="resource-info__row">
+            <span class="resource-info__label resource-info__label--block">資料の主な内容</span>
+            <p class="resource-info__text"><?php echo nl2br(esc_html($resource_meta['main_content'])); ?></p>
+          </div>
+          <?php endif; ?>
+
+          <?php if ($resource_meta['points']) : ?>
+          <div class="resource-info__row">
+            <span class="resource-info__label resource-info__label--block">おすすめポイント</span>
+            <p class="resource-info__text"><?php echo nl2br(esc_html($resource_meta['points'])); ?></p>
+          </div>
+          <?php endif; ?>
+        </div>
         <?php endif; ?>
 
         <div class="single-content">
