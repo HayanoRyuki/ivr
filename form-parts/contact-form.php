@@ -186,7 +186,7 @@
     <label class="form-checkbox">
       <input type="checkbox" name="privacy_agree" value="1" required>
       <span>
-        <a href="https://receptionist.co.jp/privacy/" target="_blank" rel="noopener noreferrer">
+        <a href="https://help.receptionist.jp/?help=402" target="_blank" rel="noopener noreferrer">
           （株）RECEPTIONISTの個人情報の取り扱い
         </a>に同意します。<span class="required">*</span>
       </span>
