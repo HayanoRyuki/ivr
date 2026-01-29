@@ -2,7 +2,7 @@
 /**
  * Archive Template: Resource（資料一覧）
  */
-get_header();
+get_header('lp');
 ?>
 
 <main class="archive archive-resource">
