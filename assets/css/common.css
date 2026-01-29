@@ -817,6 +817,17 @@ th {
   gap: 16px;
 }
 
+.thanks-actions .btn--primary {
+  background-color: #fff;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+.thanks-actions .btn--primary:hover {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
 @media screen and (max-width: 767px) {
   .thanks-page {
     padding: 60px 16px;

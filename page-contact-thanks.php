@@ -4,7 +4,7 @@
  * Description: お問い合わせフォーム送信後のサンクスページ
  */
 
-get_header();
+get_header('resource');
 ?>
 
 <main class="thanks-page">
