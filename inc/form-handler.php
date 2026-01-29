@@ -119,8 +119,8 @@ function handle_form_submission() {
     // 処理の実行
     // ============================================
 
-    // TODO: Slack通知
-    // do_action('ivr_form_slack_notify', $form_type, $form_data);
+    // Slack通知
+    ivr_send_slack_notification($form_type, $form_data);
 
     // Pardot送信
     do_action('ivr_form_pardot_submit', $form_type, $form_data);
@@ -173,4 +173,99 @@ function ivr_form_nonce_field() {
  */
 function ivr_form_ajax_url() {
     return admin_url('admin-ajax.php');
+}
+
+/**
+ * Slack通知を送信
+ *
+ * @param string $form_type フォームタイプ (request / contact)
+ * @param array  $form_data フォームデータ
+ * @return bool 送信成功したかどうか
+ */
+function ivr_send_slack_notification($form_type, $form_data) {
+    // Webhook URLが設定されていない場合はスキップ
+    if (!defined('IVR_SLACK_WEBHOOK_URL') || empty(IVR_SLACK_WEBHOOK_URL)) {
+        return false;
+    }
+
+    $form_label = ($form_type === 'contact') ? 'お問い合わせ' : '資料請求';
+    $emoji = ($form_type === 'contact') ? ':email:' : ':page_facing_up:';
+
+    // Slackメッセージを構築
+    $fields = [
+        [
+            'title' => '貴社名',
+            'value' => $form_data['company'],
+            'short' => true,
+        ],
+        [
+            'title' => '部署',
+            'value' => $form_data['department'] ?: '（未入力）',
+            'short' => true,
+        ],
+        [
+            'title' => 'お名前',
+            'value' => $form_data['last_name'] . ' ' . $form_data['first_name'],
+            'short' => true,
+        ],
+        [
+            'title' => 'メールアドレス',
+            'value' => $form_data['email'],
+            'short' => true,
+        ],
+        [
+            'title' => '電話番号',
+            'value' => $form_data['phone'],
+            'short' => true,
+        ],
+        [
+            'title' => '電話回線',
+            'value' => $form_data['phone_line'] ?: '（未入力）',
+            'short' => true,
+        ],
+        [
+            'title' => '1日の受電数',
+            'value' => $form_data['daily_calls'] ?: '（未入力）',
+            'short' => true,
+        ],
+    ];
+
+    // お問い合わせの場合はメッセージを追加
+    if ($form_type === 'contact' && !empty($form_data['message'])) {
+        $fields[] = [
+            'title' => 'お問い合わせ内容',
+            'value' => $form_data['message'],
+            'short' => false,
+        ];
+    }
+
+    $payload = [
+        'username'    => '代表電話コネクト',
+        'icon_emoji'  => $emoji,
+        'attachments' => [
+            [
+                'fallback'   => "[{$form_label}] {$form_data['company']} {$form_data['last_name']}様",
+                'color'      => ($form_type === 'contact') ? '#0098BB' : '#36a64f',
+                'pretext'    => "{$emoji} *【{$form_label}】新しい送信がありました*",
+                'title'      => "{$form_data['company']} {$form_data['last_name']}様",
+                'fields'     => $fields,
+                'footer'     => '代表電話コネクト フォーム',
+                'ts'         => time(),
+            ],
+        ],
+    ];
+
+    // Slack APIに送信
+    $response = wp_remote_post(IVR_SLACK_WEBHOOK_URL, [
+        'headers' => ['Content-Type' => 'application/json'],
+        'body'    => json_encode($payload),
+        'timeout' => 10,
+    ]);
+
+    if (is_wp_error($response)) {
+        error_log('[IVR Form] Slack notification failed: ' . $response->get_error_message());
+        return false;
+    }
+
+    return true;
 }
