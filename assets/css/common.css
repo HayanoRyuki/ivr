@@ -889,3 +889,45 @@ th {
   padding-top: 0;
   border-top: none;
 }
+
+/* =========================================
+   18. ミニマルヘッダー・フッター（資料ページ用）
+========================================= */
+
+/* ミニマルヘッダー（ロゴのみ） */
+.lp-connect__header--minimal {
+  padding: 20px 0;
+  background: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lp-connect__header--minimal .lp-connect__header-inner {
+  justify-content: center;
+}
+
+.lp-connect__header--minimal .lp-connect__header-logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* ミニマルフッター（コピーライトのみ） */
+.lp-connect__footer--minimal {
+  padding: 40px 20px;
+  background: var(--color-bg-gray);
+}
+
+.lp-connect__footer-copyright-only {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-gray);
+}
+
+@media screen and (max-width: 767px) {
+  .lp-connect__header--minimal .lp-connect__header-logo img {
+    height: 32px;
+  }
+
+  .lp-connect__footer--minimal {
+    padding: 32px 16px;
+  }
+}

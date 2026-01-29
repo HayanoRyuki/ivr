@@ -2,7 +2,7 @@
 /**
  * Single Template: Resource（資料詳細）
  */
-get_header();
+get_header('resource');
 ?>
 
 <main class="single single-resource">
@@ -73,4 +73,4 @@ get_header();
 
 </main>
 
-<?php get_footer('simple'); ?>
+<?php get_footer('resource'); ?>
