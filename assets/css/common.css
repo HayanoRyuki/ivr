@@ -902,7 +902,13 @@ th {
 }
 
 .lp-connect__header--minimal .lp-connect__header-inner {
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.lp-connect__header--minimal .lp-connect__header-logo {
+  margin: 0 auto;
 }
 
 .lp-connect__header--minimal .lp-connect__header-logo img {
