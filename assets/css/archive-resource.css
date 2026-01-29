@@ -43,9 +43,14 @@
   border-color: #0098BB;
 }
 
+/* サムネイル比率 16:9（1920x1080） */
+.archive-resource .archive-card-thumbnail img {
+  aspect-ratio: 16/9;
+}
+
 .archive-resource .archive-card-thumbnail--noimage {
   background: linear-gradient(135deg, #E6F5F8 0%, #D7EEF3 100%);
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   display: flex;
   align-items: center;
   justify-content: center;
