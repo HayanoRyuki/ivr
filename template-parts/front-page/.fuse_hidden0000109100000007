@@ -10,7 +10,7 @@
 
       <a class="lp-connect__button"
          href="/resource/general/"
-         >
+         target="_blank" rel="noopener">
         資料請求はこちら
       </a>
 

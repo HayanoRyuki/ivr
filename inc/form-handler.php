@@ -38,7 +38,7 @@ function handle_form_submission() {
         // ボットには成功レスポンスを返す（再試行防止）
         wp_send_json_success([
             'message'  => '送信が完了しました。',
-            'redirect' => home_url('/thanks/'),
+            'redirect' => home_url('/resource-thanks/'),
         ]);
         return;
     }
@@ -153,7 +153,7 @@ function handle_form_submission() {
     // ============================================
     // レスポンス
     // ============================================
-    $thanks_page = ($form_type === 'contact') ? '/contact-thanks/' : '/request-thanks/';
+    $thanks_page = ($form_type === 'contact') ? '/contact-thanks/' : '/resource-thanks/';
 
     wp_send_json_success([
         'message'  => '送信が完了しました。',

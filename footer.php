@@ -15,9 +15,7 @@
       <div class="lp-connect__footer-cta-links">
 
         <!-- ▼ 資料請求リンク（仮URLに差し替え） -->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSf7C_WQbr78WcWEmtFfG7kFM73ue88dxclcUAarY8EZGGSNGw/viewform?usp=dialog"
-   class="lp-connect__button"
-   target="_blank" rel="noopener">
+<a href="/resource/general/" class="lp-connect__button">
   資料を見てみる
 </a>
 

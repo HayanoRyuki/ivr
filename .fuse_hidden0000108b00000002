@@ -50,7 +50,7 @@
       <div class="lp-connect__header-nav-cta">
         <a class="lp-connect__header-button"
            href="/resource/general/"
-           >
+           target="_blank" rel="noopener">
           資料請求はこちら
         </a>
       </div>
