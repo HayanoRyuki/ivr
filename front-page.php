@@ -396,8 +396,8 @@
             <tbody>
               <tr>
                 <td class="lp-connect__price-table-td">100回まで</td>
-                <td class="lp-connect__price-table-td"><span class="lp-connect__price-table-number">5,000</span>円<span class="lp-connect__price-table-unit">/月・番号</span></td>
                 <td class="lp-connect__price-table-td"><span class="lp-connect__price-table-number">7,000</span>円<span class="lp-connect__price-table-unit">/月・番号</span></td>
+                <td class="lp-connect__price-table-td"><span class="lp-connect__price-table-number">10,000</span>円<span class="lp-connect__price-table-unit">/月・番号</span></td>
               </tr>
             </tbody>
           </table>
@@ -407,7 +407,7 @@
           <span class="lp-connect__price-example-label">例）</span>
           <p class="lp-connect__price-example-text">
             RECEPTIONIST契約済企業様で、月間受電回数がおおよそ200回前後の場合、<br class="lp-connect__pc-only">
-            5,000円×2＝10,000円/月
+            7,000円×2＝14,000円/月
           </p>
         </div>
 

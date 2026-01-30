@@ -34,7 +34,7 @@
         </div>
         <div class="lp-connect__price-card-body">
           <div class="lp-connect__price-card-detail">
-            <span class="lp-connect__price-card-number">5,000</span>
+            <span class="lp-connect__price-card-number">7,000</span>
             <span class="lp-connect__price-card-unit">円</span>
             <span class="lp-connect__price-card-unit--mini">/ 月・番号</span>
           </div>
@@ -47,7 +47,7 @@
       <span class="lp-connect__price-babble-example">例）</span>
       <p class="lp-connect__price-babble-text">
         RECEPTIONIST登録社員数が120名で取得番号1つの場合、<br class="lp-connect__sp-only">
-        5,000円 × 3 = 15,000円
+        7,000円 × 3 = 21,000円
       </p>
     </div>
 
