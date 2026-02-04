@@ -195,10 +195,10 @@
           // 8機能カードの設定（画像、タイトル、オプション機能かどうか）
           $functions = [
             ['img' => 'img_function01.webp', 'title' => '自動応答', 'option' => false],
-            ['img' => 'img_function01.webp', 'title' => '用件振り分け', 'option' => true],  // TODO: 画像差し替え
+            ['img' => 'img_function07.webp', 'title' => '用件振り分け', 'option' => true],
             ['img' => 'img_function02.webp', 'title' => '音声録音', 'option' => false],
             ['img' => 'img_function03.webp', 'title' => '音声文字起こし', 'option' => false],
-            ['img' => 'img_function01.webp', 'title' => '指定番号に転送', 'option' => true],  // TODO: 画像差し替え
+            ['img' => 'img_function08.webp', 'title' => '指定番号に転送', 'option' => true],
             ['img' => 'img_function04.webp', 'title' => '着信ログをWEBから確認', 'option' => false],
             ['img' => 'img_function05.webp', 'title' => '着信ログのステータス管理', 'option' => false],
             ['img' => 'img_function06.webp', 'title' => 'チャット連携', 'option' => false],
@@ -264,7 +264,7 @@
               'text'  => '出社メンバーにだけ代表電話対応が発生してしまうのを避けたい。'
             ],
             [
-              'img'   => 'img_recommend01.webp',  // TODO: 画像差し替え
+              'img'   => 'img_recommend06.webp',
               'title' => '各部門あての電話',
               'text'  => '各部門あての電話の取次をなくし、それぞれの部門で電話対応を完結してほしい。'
             ],
