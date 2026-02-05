@@ -42,13 +42,14 @@
   <!-- 部署 -->
   <div class="form-group">
     <label for="department" class="form-label">
-      部署
+      部署<span class="required">*</span>
     </label>
     <input
       type="text"
       id="department"
       name="department"
       class="form-input"
+      required
       placeholder="例）総務部"
     >
   </div>
@@ -116,10 +117,10 @@
   <!-- 現在お使いの電話回線 -->
   <div class="form-group">
     <fieldset class="form-fieldset">
-      <legend class="form-label">現在お使いの電話回線</legend>
+      <legend class="form-label">現在お使いの電話回線<span class="required">*</span></legend>
       <div class="form-radio-group">
         <label class="form-radio">
-          <input type="radio" name="phone_line" value="アナログ回線">
+          <input type="radio" name="phone_line" value="アナログ回線" required>
           <span>アナログ回線</span>
         </label>
         <label class="form-radio">
@@ -141,10 +142,10 @@
   <!-- 1日の受電数 -->
   <div class="form-group">
     <fieldset class="form-fieldset">
-      <legend class="form-label">1日の受電数</legend>
+      <legend class="form-label">1日の受電数<span class="required">*</span></legend>
       <div class="form-radio-group">
         <label class="form-radio">
-          <input type="radio" name="daily_calls" value="0〜5件">
+          <input type="radio" name="daily_calls" value="0〜5件" required>
           <span>0〜5件</span>
         </label>
         <label class="form-radio">

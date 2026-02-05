@@ -107,6 +107,19 @@ function handle_form_submission() {
         $errors[] = '個人情報の取り扱いに同意してください。';
     }
 
+    // 資料請求フォームの場合：追加の必須項目チェック
+    if ($form_type === 'request') {
+        if (empty($form_data['department'])) {
+            $errors[] = '部署を入力してください。';
+        }
+        if (empty($form_data['phone_line'])) {
+            $errors[] = '電話回線を選択してください。';
+        }
+        if (empty($form_data['daily_calls'])) {
+            $errors[] = '1日の受電数を選択してください。';
+        }
+    }
+
     if (!empty($errors)) {
         wp_send_json_error([
             'message' => implode("\n", $errors),
