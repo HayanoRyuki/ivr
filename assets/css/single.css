@@ -11,14 +11,14 @@
 /* =========================================
    1. メインレイアウト
 ========================================= */
-.single,
+main.single,
 .single-wrap {
   padding: 60px 20px 80px;
   min-height: calc(100vh - 200px);
 }
 
 @media screen and (max-width: 767px) {
-  .single,
+  main.single,
   .single-wrap {
     padding: 40px 16px 60px;
   }
